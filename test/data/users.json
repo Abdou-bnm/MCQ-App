@@ -1,0 +1,19 @@
+{
+    "darkoo": {
+        "password": "darkoo",
+        "history": [
+            {
+                "date": "2024-12-31 00:23:29",
+                "score": 2
+            },
+            {
+                "date": "2024-12-31 00:24:08",
+                "score": 2
+            }
+        ]
+    },
+    "abdou": {
+        "password": "abdou",
+        "history": []
+    }
+}
