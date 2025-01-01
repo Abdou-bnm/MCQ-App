@@ -66,8 +66,8 @@ def load_question(id):
                                 break
                         except ValueError:
                             print("Invalid input. Please enter a number.")
-                    print(question["answer"])
-                    if user_answer==question["answer"]:
+
+                    if user_answer==question["answer"]+1:
                         return True
                     else:
                         return False
@@ -80,7 +80,38 @@ def load_question(id):
        print(f"Error loading the questions file: {e}")
        return -1
 
+
+#returns the selected category as a string
+def select_category():
+    try:
+        with open("questions.json", "r") as file:
+            questions = json.load(file) 
+    except Exception as e:
+        print(f"Error opening the questions file {e}")
+        return
+    
+    print("Available categories:")
+    categories = list(questions.keys())
+    for idx, category in enumerate(categories, 1):
+        print(f"{idx}. {category}")
+    
+    # we get the user's choice
+    while True:
+        try:
+            user_choice = int(input("Select a category (enter the number): "))
+            if 1 <= user_choice <= len(categories):
+                break
+            else:
+                print("Invalid choice. Please select a valid option.")
+        except ValueError:
+            print("Invalid input. Please enter a number.")
+    selected_category = categories[user_choice - 1]
+    return selected_category
+    
+
+
    
-print(load_question(1))
+#print(load_question(1))
+print(select_category())
 
 

@@ -33,5 +33,18 @@
             ],
             "answer": 0
         }
+    ],
+    "Python": [
+        {
+            "id":1,
+            "question": "What is Python?",
+            "options": [
+                "A snake",
+                "A programming language",
+                "A video game",
+                "A movie"
+            ],
+            "answer": 1
+        }
     ]
 }
