@@ -43,3 +43,44 @@ def add_question(category, question_text, options, answer):
     except Exception as e:
         print(f"Error saving the updated questions file: {e}")
 
+# this function will be used to load a question by its id (we will use it after getting the id of a question the user hasn't already solved) and it will return true (if he chose the correct answer ) or false
+def load_question(id):
+   try:
+        with open("questions.json", "r") as file:
+            questions = json.load(file)
+        
+        #search for the question by ID
+        for category, question_list in questions.items():
+            for question in question_list:
+                if question["id"] == id:
+                    # we found the question now we print it , and its options
+                    print(f"Question: {question['question']}")
+                    print("Options:")
+                    for idx, option in enumerate(question["options"], 1):
+                        print(f"{idx}. {option}")
+                    # now we ask for the user's input(answer)
+                    while True:
+                        try:
+                            user_answer = int(input("Enter the number of your answer: "))
+                            if 1 <= user_answer <= len(question["options"]):
+                                break
+                        except ValueError:
+                            print("Invalid input. Please enter a number.")
+                    print(question["answer"])
+                    if user_answer==question["answer"]:
+                        return True
+                    else:
+                        return False
+                        
+        # we haven't found the qst
+        print(f"Question with ID {id} not found.")
+                
+
+   except Exception as e:
+       print(f"Error loading the questions file: {e}")
+       return -1
+
+   
+print(load_question(1))
+
+
