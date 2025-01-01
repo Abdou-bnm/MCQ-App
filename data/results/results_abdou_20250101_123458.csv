@@ -1,7 +1,0 @@
-Username,Category,Date,Score,Total Questions,Percentage
-abdou,python,2025-01-01 12:34:58,1,3,33.33
-
-Detailed Feedback
-What is the average time complexity of searching in a sorted array?,Incorrect,Your answer: O(n),Correct answer: O(log n)
-Which keyword is used to define a function in Python?,Incorrect,Your answer: func,Correct answer: def
-What does the 'len()' function do in Python?,Correct,Your answer: Returns the length of a string,Correct answer: Returns the length of a string
