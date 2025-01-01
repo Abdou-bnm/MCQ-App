@@ -66,7 +66,6 @@ class EvaluationSystem:
                     "score": score["raw_score"]
                 }
                 users_data[username]["history"].append(new_entry)
-                print(users_data[username]["history"])
                 
                 with open('data/users.json', 'w') as file:
                     json.dump(users_data, file, indent=4)
