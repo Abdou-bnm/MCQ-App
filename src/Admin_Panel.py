@@ -3,135 +3,118 @@ from tkinter import messagebox, simpledialog, ttk
 from utils import load_questions, save_questions
 import json
 
-# Set Appearance Modes and Themes
-ctk.set_appearance_mode("light")  # Default mode
-ctk.set_default_color_theme("blue")  # Color theme
+ctk.set_appearance_mode("light")  
+ctk.set_default_color_theme("blue")  
 
 class AdminPanel(ctk.CTk):
     def __init__(self):
         super().__init__()
 
-        # Configure Window
         self.title("Manage Questions")
         self.geometry("800x600")
         self.questions = load_questions()
         self.users = self.load_users()
         
-        # Background Color for Light and Dark Mode
-        self.configure(fg_color=("white", "#2C3E50"))  # Light (white) / Dark (blue-gray)
+        self.configure(fg_color=("white", "#2C3E50"))
 
-        # Sidebar Menu
         self.sidebar = ctk.CTkFrame(
             self, width=150, fg_color=("#E8F5FA", "#1F6AA5"), corner_radius=0
         )
         self.sidebar.pack(side="left", fill="y")
 
-        # Title Label
         self.label_title = ctk.CTkLabel(
             self.sidebar, text="Quizzy", font=("Arial", 18, "bold"), text_color=("#1F6AA5", "#E8F5FA")
         )
         self.label_title.pack(pady=10)
 
-        # Top Buttons
         self.btn_questions = ctk.CTkButton(
             self.sidebar, text="Questions", 
             command=self.show_questions_tab , 
-            fg_color=("white", "#1F6AA5"),            # Light and Dark mode
-            border_color=("#1F6AA5", "#E8F5FA"),     # Border color
-            border_width=2,                          # Border width
-            text_color=("#1F6AA5", "#E8F5FA"),       # Text color
-            hover_color=("#D6E4FF", "#4A90E2")       # Hover effect  
+            fg_color=("white", "#1F6AA5"),          
+            border_color=("#1F6AA5", "#E8F5FA"),    
+            border_width=2,                        
+            text_color=("#1F6AA5", "#E8F5FA"),
+            hover_color=("#D6E4FF", "#4A90E2")   
         )
         self.btn_questions.pack(padx=20, pady=10)
 
         self.btn_categories = ctk.CTkButton(
             self.sidebar, text="Categories", 
             command=self.show_categories_tab ,
-            fg_color=("white", "#1F6AA5"),            # Light and Dark mode
-            border_color=("#1F6AA5", "#E8F5FA"),     # Border color
-            border_width=2,                          # Border width
-            text_color=("#1F6AA5", "#E8F5FA"),       # Text color
-            hover_color=("#D6E4FF", "#4A90E2")       # Hover effect 
+            fg_color=("white", "#1F6AA5"),        
+            border_color=("#1F6AA5", "#E8F5FA"), 
+            border_width=2,                     
+            text_color=("#1F6AA5", "#E8F5FA"),  
+            hover_color=("#D6E4FF", "#4A90E2")      
         )
         self.btn_categories.pack(padx=20, pady=10)
 
         self.btn_users = ctk.CTkButton(
             self.sidebar, text="Users", 
             command=self.show_users_tab,
-            fg_color=("white", "#1F6AA5"),            # Light and Dark mode
-            border_color=("#1F6AA5", "#E8F5FA"),     # Border color
-            border_width=2,                          # Border width
-            text_color=("#1F6AA5", "#E8F5FA"),       # Text color
-            hover_color=("#D6E4FF", "#4A90E2")       # Hover effect 
+            fg_color=("white", "#1F6AA5"),      
+            border_color=("#1F6AA5", "#E8F5FA"),     
+            border_width=2,                       
+            text_color=("#1F6AA5", "#E8F5FA"),  
+            hover_color=("#D6E4FF", "#4A90E2")    
         )
         self.btn_users.pack(padx=20, pady=10)
 
-        # Spacer for Bottom Buttons
         ctk.CTkFrame(self.sidebar, fg_color="transparent").pack(expand=True, fill="y")
 
-        # Toggle Dark/Light Mode
         def toggle_mode():
             if switch_var.get():  
-                ctk.set_appearance_mode("dark")  # Switch to dark mode
+                ctk.set_appearance_mode("dark") 
             else:
-                ctk.set_appearance_mode("light")  # Switch to light mode
+                ctk.set_appearance_mode("light") 
 
-        # Mode Switch Button
         switch_var = ctk.BooleanVar(value=False)
         self.btn_mode = ctk.CTkSwitch(
             self.sidebar,
             text="Switch Mode",
             command=toggle_mode,
             variable=switch_var,
-            fg_color=("lightgray", "#1F6AA5"),  # Toggle colors
+            fg_color=("lightgray", "#1F6AA5"),
             progress_color=("blue", "white")
         )
         self.btn_mode.pack(pady=10)
 
-        # Home Button (At Bottom)
         self.btn_home = ctk.CTkButton(
             self.sidebar,
             text="Logout",
             command=self.Logout,
-            fg_color=("white", "#1F6AA5"),            # Light and Dark mode
-            border_color=("#1F6AA5", "#E8F5FA"),     # Border color
-            border_width=2,                          # Border width
-            text_color=("#1F6AA5", "#E8F5FA"),       # Text color
-            hover_color=("#D6E4FF", "#4A90E2")       # Hover effect
+            fg_color=("white", "#1F6AA5"),           
+            border_color=("#1F6AA5", "#E8F5FA"),   
+            border_width=2,                         
+            text_color=("#1F6AA5", "#E8F5FA"),       
+            hover_color=("#D6E4FF", "#4A90E2")     
         )
         self.btn_home.pack(pady=10, padx=20)
 
-        # Tabs
         self.tabs = ctk.CTkFrame(self, fg_color=("white", "#34495E"))
         self.tabs.pack(side="right", fill="both", expand=True)
 
-        # Initialize Tabs
         self.show_questions_tab()
 
 
     ###############################################################################################
     
     def show_questions_tab(self):
-        # Clear existing widgets in the tab
         for widget in self.tabs.winfo_children():
             widget.destroy()
 
-        # Title Label
         self.label_title = ctk.CTkLabel(self.tabs, text="Manage Questions", font=("Arial", 18, "bold"))
         self.label_title.pack(pady=10)
 
-        # Table Frame with Scrollbars
-        table_frame = ctk.CTkFrame(self.tabs, fg_color="transparent")  # Transparent frame
+        table_frame = ctk.CTkFrame(self.tabs, fg_color="transparent") 
         table_frame.pack(padx=10, pady=10, fill="both", expand=True)
 
-        # Scrollbars
         tree_scroll_y = ttk.Scrollbar(table_frame, orient="vertical")
         tree_scroll_y.pack(side="right", fill="y")
 
         tree_scroll_x = ttk.Scrollbar(table_frame, orient="horizontal")
         tree_scroll_x.pack(side="bottom", fill="x")
 
-        # Table for questions
         self.tree = ttk.Treeview(
             table_frame, 
             columns=("Question", "Category", "Correct"), 
@@ -140,37 +123,31 @@ class AdminPanel(ctk.CTk):
             xscrollcommand=tree_scroll_x.set
         )
 
-        # Configure Scrollbars
         tree_scroll_y.config(command=self.tree.yview)
         tree_scroll_x.config(command=self.tree.xview)
 
-        # Define Columns
         self.tree.heading("Question", text="Question Text", anchor="w")
         self.tree.heading("Category", text="Category", anchor="center")
         self.tree.heading("Correct", text="Correct Answer", anchor="center")
 
-        # Column Widths
         self.tree.column("Question", anchor="w", width=460)
         self.tree.column("Category", anchor="center", width=120)
         self.tree.column("Correct", anchor="center", width=120)
 
         self.tree.pack(fill="both", expand=True)
 
-        # Populate table with questions
         for category, questions in self.questions.items():
             for question in questions:
                 self.tree.insert("", "end", values=(question["question"], category, question["correct"]))
 
-        # Buttons for actions inside a frame
         frame = ctk.CTkFrame(self.tabs, fg_color="transparent")  # Transparent frame
         frame.pack(pady=20, padx=20)
 
-        # Buttons inside the frame
         self.btn_add = ctk.CTkButton(
             frame,
             text="Add Question",
             text_color="#ffffff",
-            command=self.add_question,  # Default Blue
+            command=self.add_question, 
         )
         self.btn_add.grid(row=0, column=0, padx=10)
 
@@ -178,7 +155,7 @@ class AdminPanel(ctk.CTk):
             frame,
             text="Edit Question",
             text_color="#ffffff",
-            command=self.edit_question,  # Default Blue
+            command=self.edit_question, 
         )
         self.btn_edit.grid(row=0, column=1, padx=10)
 
@@ -186,15 +163,12 @@ class AdminPanel(ctk.CTk):
             frame,
             text="Delete Question",
             command=self.delete_question,
-            fg_color="#E53935",  # Simple Red for Danger
+            fg_color="#E53935", 
             text_color="#ffffff",
-            hover_color="#D32F2F"  # Darker Red Hover
+            hover_color="#D32F2F"  
         )
         self.btn_delete.grid(row=0, column=2, padx=10)
 
-
-
-    # Add Question
     def add_question(self):
         category = simpledialog.askstring("Input", "Enter Category:")
         if not category:
@@ -226,7 +200,6 @@ class AdminPanel(ctk.CTk):
         messagebox.showinfo("Success", "Question added successfully!")
         self.show_questions_tab()
 
-    # Edit Question
     def edit_question(self):
         selected = self.tree.selection()
         if not selected:
@@ -271,23 +244,18 @@ class AdminPanel(ctk.CTk):
     ###############################################################################################
     
     def show_categories_tab(self):
-        # Clear existing widgets in the tab
         for widget in self.tabs.winfo_children():
             widget.destroy()
 
-        # Title Label
         self.label_title = ctk.CTkLabel(self.tabs, text="Manage Categories", font=("Arial", 18))
         self.label_title.pack(pady=10)
 
-        # Frame for displaying categories
         frame = ctk.CTkFrame(self.tabs, fg_color="transparent")
         frame.pack(padx=20, pady=10, fill="both", expand=True)
 
-        # Scrollbar for categories
         category_scroll_y = ttk.Scrollbar(frame, orient="vertical")
         category_scroll_y.pack(side="right", fill="y")
 
-        # Listbox for displaying categories
         self.category_listbox = ttk.Treeview(
             frame,
             columns=("Category",),
@@ -295,38 +263,30 @@ class AdminPanel(ctk.CTk):
             yscrollcommand=category_scroll_y.set
         )
 
-        # Configure scrollbar
         category_scroll_y.config(command=self.category_listbox.yview)
 
-        # Define columns
         self.category_listbox.heading("Category", text="Categories", anchor="w")
         self.category_listbox.column("Category", anchor="w", width=300)
 
-        # Display categories in the listbox
         for category in self.questions.keys():
             self.category_listbox.insert("", "end", values=(category,))
 
         self.category_listbox.pack(fill="both", expand=True, padx=10, pady=10)
 
-        # Buttons for actions
         button_frame = ctk.CTkFrame(self.tabs, fg_color="transparent")
         button_frame.pack(pady=10)
 
-        # Add Category Button
         self.btn_add_category = ctk.CTkButton(button_frame, text="Add Category",text_color="#ffffff" ,command=self.add_category)
         self.btn_add_category.grid(row=0, column=0, padx=10)
 
-        # Delete Category Button
         self.btn_delete_category = ctk.CTkButton(button_frame, text="Delete Category",fg_color="#E53935",text_color="#ffffff",hover_color="#D32F2F",command=self.delete_category)
         self.btn_delete_category.grid(row=0, column=1, padx=10)
 
 
     def render_categories(self):
-        # Clear existing items in the Treeview
         for item in self.category_listbox.get_children():
             self.category_listbox.delete(item)
 
-        # Repopulate categories
         for category in self.questions.keys():
             self.category_listbox.insert("", "end", values=(category,))
         
@@ -352,8 +312,7 @@ class AdminPanel(ctk.CTk):
             messagebox.showinfo("Success", "Category deleted successfully!")
             self.render_categories()
 
-   ###############################################################################################
-
+    ###############################################################################################
 
     def load_users(self):
         try:
@@ -449,8 +408,6 @@ class AdminPanel(ctk.CTk):
             self.save_users()
             self.refresh_users_table()
 
-
-    # Return Home
     def Logout(self):
         self.destroy()
         from login import LoginApp
