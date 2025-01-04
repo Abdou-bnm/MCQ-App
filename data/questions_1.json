@@ -1,0 +1,226 @@
+{
+    "categories": [
+        {
+            "name": "Python",
+            "levels": [
+                {
+                    "level": "easy",
+                    "questions": [
+                        {
+                            "question": "Which keyword is used to define a function in Python?",
+                            "options": [
+                                "def",
+                                "func",
+                                "lambda"
+                            ],
+                            "correct": "def"
+                        },
+                        {
+                            "question": "What does the 'len()' function do in Python?",
+                            "options": [
+                                "Returns the length of a string",
+                                "Calculates logarithm",
+                                "Counts occurrences of an element"
+                            ],
+                            "correct": "Returns the length of a string"
+                        }
+                    ]
+                },
+                {
+                    "level": "medium",
+                    "questions": [
+                        {
+                            "question": "What is the average time complexity of searching in a sorted array?",
+                            "options": [
+                                "O(1)",
+                                "O(log n)",
+                                "O(n)"
+                            ],
+                            "correct": "O(log n)"
+                        },
+                        {
+                            "question": "Which data structure is used to implement a queue in Python?",
+                            "options": [
+                                "List",
+                                "Set",
+                                "Dictionary"
+                            ],
+                            "correct": "List"
+                        }
+                    ]
+                },
+                {
+                    "level": "hard",
+                    "questions": [
+                        {
+                            "question": "What is the output of the expression 3 ** 2 ** 2 in Python?",
+                            "options": [
+                                "81",
+                                "16",
+                                "256"
+                            ],
+                            "correct": "256"
+                        },
+                        {
+                            "question": "What is the difference between a shallow copy and a deep copy in Python?",
+                            "options": [
+                                "Shallow copy duplicates only references, deep copy duplicates objects",
+                                "Shallow copy duplicates objects, deep copy duplicates only references",
+                                "They are the same"
+                            ],
+                            "correct": "Shallow copy duplicates only references, deep copy duplicates objects"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Science",
+            "levels": [
+                {
+                    "level": "easy",
+                    "questions": [
+                        {
+                            "question": "Which planet is known as the Red Planet?",
+                            "options": [
+                                "Earth",
+                                "Mars",
+                                "Venus"
+                            ],
+                            "correct": "Mars"
+                        },
+                        {
+                            "question": "What is the chemical symbol for water?",
+                            "options": [
+                                "H2O",
+                                "O2",
+                                "CO2"
+                            ],
+                            "correct": "H2O"
+                        }
+                    ]
+                },
+                {
+                    "level": "medium",
+                    "questions": [
+                        {
+                            "question": "Which gas is most abundant in the Earth's atmosphere?",
+                            "options": [
+                                "Oxygen",
+                                "Nitrogen",
+                                "Carbon Dioxide"
+                            ],
+                            "correct": "Nitrogen"
+                        },
+                        {
+                            "question": "What is the primary source of energy for life on Earth?",
+                            "options": [
+                                "The Sun",
+                                "Volcanoes",
+                                "Wind"
+                            ],
+                            "correct": "The Sun"
+                        }
+                    ]
+                },
+                {
+                    "level": "hard",
+                    "questions": [
+                        {
+                            "question": "What is the atomic number of Oxygen?",
+                            "options": [
+                                "6",
+                                "8",
+                                "16"
+                            ],
+                            "correct": "8"
+                        },
+                        {
+                            "question": "What is the speed of light in a vacuum?",
+                            "options": [
+                                "300,000 km/s",
+                                "150,000 km/s",
+                                "500,000 km/s"
+                            ],
+                            "correct": "300,000 km/s"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Math",
+            "levels": [
+                {
+                    "level": "easy",
+                    "questions": [
+                        {
+                            "question": "What is the square root of 64?",
+                            "options": [
+                                "6",
+                                "7",
+                                "8"
+                            ],
+                            "correct": "8"
+                        },
+                        {
+                            "question": "What is 15% of 200?",
+                            "options": [
+                                "25",
+                                "30",
+                                "35"
+                            ],
+                            "correct": "30"
+                        }
+                    ]
+                },
+                {
+                    "level": "medium",
+                    "questions": [
+                        {
+                            "question": "What is the result of 7 + 8 * 2?",
+                            "options": [
+                                "30",
+                                "23",
+                                "22"
+                            ],
+                            "correct": "23"
+                        },
+                        {
+                            "question": "Which is a prime number?",
+                            "options": [
+                                "4",
+                                "6",
+                                "7"
+                            ],
+                            "correct": "7"
+                        }
+                    ]
+                },
+                {
+                    "level": "hard",
+                    "questions": [
+                        {
+                            "question": "What is the derivative of x^2?",
+                            "options": [
+                                "x",
+                                "2x",
+                                "x^2"
+                            ],
+                            "correct": "2x"
+                        },
+                        {
+                            "question": "What is the value of Pi to 3 decimal places?",
+                            "options": [
+                                "3.142",
+                                "3.141",
+                                "3.140"
+                            ],
+                            "correct": "3.142"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
