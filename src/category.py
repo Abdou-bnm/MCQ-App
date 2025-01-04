@@ -19,7 +19,9 @@ class CategoryManager:
         """Save data to JSON file"""
         with open(self.file_path, "w") as file:
             json.dump(data, file, indent=4)
+#crud operations
 
+#add new category
     def create_category(self, name: str, levels: Optional[List] = None) -> bool:
         """
         Create a new category with optional levels.
@@ -51,5 +53,18 @@ class CategoryManager:
         data["categories"].append(new_category)
         self._save_data(data)
         return True
+    
+    # read category
+    def read_category(self, name: str) -> Optional[Dict]:
+        """Get a category by name"""
+        data = self._load_data()
+        for category in data["categories"]:
+            if category["name"] == name:
+                return category
+        return None
+# get list of categories 
+    def list_categories(self) -> List[str]:
+        """Get a list of all category names"""
+        data = self._load_data()
+        return [category["name"] for category in data["categories"]]
 
-  
