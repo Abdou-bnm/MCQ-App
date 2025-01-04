@@ -22,8 +22,16 @@ class CategoryManager:
 
     def create_category(self, name: str, levels: Optional[List] = None) -> bool:
         """
-        Create a new category with optional levels
-        Returns True if successful, False if category already exists
+        Create a new category with optional levels.
+        
+        Arguments:
+        name (str): The name of the category to be created. It must be a string and is required.
+        levels (Optional[List], optional): A list of dictionaries, each containing a 'level' (str) and a 'questions' (list).
+                                             If not provided, the default levels ("easy", "medium", "hard") will be used.
+                                             The default is None, which means the default levels will be used.
+
+        Returns:
+        bool: Returns True if the category was successfully created, False if the category already exists.
         """
         data = self._load_data()
         
