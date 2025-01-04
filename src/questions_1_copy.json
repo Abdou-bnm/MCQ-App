@@ -1,0 +1,55 @@
+{
+    "categories": [
+        {
+            "name": "Science",
+            "levels": [
+                {
+                    "level": "easy",
+                    "questions": []
+                },
+                {
+                    "level": "medium",
+                    "questions": []
+                },
+                {
+                    "level": "hard",
+                    "questions": []
+                }
+            ]
+        },
+        {
+            "name": "World History",
+            "levels": [
+                {
+                    "level": "easy",
+                    "questions": []
+                },
+                {
+                    "level": "medium",
+                    "questions": []
+                },
+                {
+                    "level": "hard",
+                    "questions": []
+                }
+            ]
+        },
+        {
+            "name": "World History",
+            "levels": [
+                {
+                    "level": "easy",
+                    "questions": []
+                },
+                {
+                    "level": "medium",
+                    "questions": []
+                },
+                {
+                    "level": "hard",
+                    "questions": []
+                }
+            ]
+        }
+    ]
+}

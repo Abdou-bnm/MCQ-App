@@ -1,8 +1,9 @@
 import json
+import os
 from typing import List, Dict, Optional, Union
 
 class CategoryManager:
-    def __init__(self, file_path: str = "questions_1.json"):
+    def __init__(self, file_path: str = "questions_1_copy.json"):
         self.file_path = file_path
     #load categories    
     def _load_data(self) -> Dict:
@@ -17,6 +18,13 @@ class CategoryManager:
     #save new data 
     def _save_data(self, data: Dict) -> None:
         """Save data to JSON file"""
+        import os
+
+        print(f"Checking if the file exists: {self.file_path}")
+        if not os.path.exists(self.file_path):
+            print(f"File does not exist. Creating new file.")
+
+        print(f"Saving data to: {self.file_path}")  # Debugging line
         with open(self.file_path, "w") as file:
             json.dump(data, file, indent=4)
 #crud operations
@@ -52,6 +60,7 @@ class CategoryManager:
         
         data["categories"].append(new_category)
         self._save_data(data)
+        
         return True
     
     # read category
