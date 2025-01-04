@@ -1,226 +1,419 @@
 {
-    "categories": [
+  "categories": [
+    {
+      "name": "Python",
+      "levels": [
         {
-            "name": "Python",
-            "levels": [
-                {
-                    "level": "easy",
-                    "questions": [
-                        {
-                            "question": "Which keyword is used to define a function in Python?",
-                            "options": [
-                                "def",
-                                "func",
-                                "lambda"
-                            ],
-                            "correct": "def"
-                        },
-                        {
-                            "question": "What does the 'len()' function do in Python?",
-                            "options": [
-                                "Returns the length of a string",
-                                "Calculates logarithm",
-                                "Counts occurrences of an element"
-                            ],
-                            "correct": "Returns the length of a string"
-                        }
-                    ]
-                },
-                {
-                    "level": "medium",
-                    "questions": [
-                        {
-                            "question": "What is the average time complexity of searching in a sorted array?",
-                            "options": [
-                                "O(1)",
-                                "O(log n)",
-                                "O(n)"
-                            ],
-                            "correct": "O(log n)"
-                        },
-                        {
-                            "question": "Which data structure is used to implement a queue in Python?",
-                            "options": [
-                                "List",
-                                "Set",
-                                "Dictionary"
-                            ],
-                            "correct": "List"
-                        }
-                    ]
-                },
-                {
-                    "level": "hard",
-                    "questions": [
-                        {
-                            "question": "What is the output of the expression 3 ** 2 ** 2 in Python?",
-                            "options": [
-                                "81",
-                                "16",
-                                "256"
-                            ],
-                            "correct": "256"
-                        },
-                        {
-                            "question": "What is the difference between a shallow copy and a deep copy in Python?",
-                            "options": [
-                                "Shallow copy duplicates only references, deep copy duplicates objects",
-                                "Shallow copy duplicates objects, deep copy duplicates only references",
-                                "They are the same"
-                            ],
-                            "correct": "Shallow copy duplicates only references, deep copy duplicates objects"
-                        }
-                    ]
-                }
-            ]
+          "level": "easy",
+          "questions": [
+            {
+              "question": "Which keyword is used to define a function in Python?",
+              "options": ["def", "func", "lambda"],
+              "correct": "def"
+            },
+            {
+              "question": "What does the 'len()' function do in Python?",
+              "options": [
+                "Returns the length of a string",
+                "Calculates logarithm",
+                "Counts occurrences of an element"
+              ],
+              "correct": "Returns the length of a string"
+            }
+          ]
         },
         {
-            "name": "Science",
-            "levels": [
-                {
-                    "level": "easy",
-                    "questions": [
-                        {
-                            "question": "Which planet is known as the Red Planet?",
-                            "options": [
-                                "Earth",
-                                "Mars",
-                                "Venus"
-                            ],
-                            "correct": "Mars"
-                        },
-                        {
-                            "question": "What is the chemical symbol for water?",
-                            "options": [
-                                "H2O",
-                                "O2",
-                                "CO2"
-                            ],
-                            "correct": "H2O"
-                        }
-                    ]
-                },
-                {
-                    "level": "medium",
-                    "questions": [
-                        {
-                            "question": "Which gas is most abundant in the Earth's atmosphere?",
-                            "options": [
-                                "Oxygen",
-                                "Nitrogen",
-                                "Carbon Dioxide"
-                            ],
-                            "correct": "Nitrogen"
-                        },
-                        {
-                            "question": "What is the primary source of energy for life on Earth?",
-                            "options": [
-                                "The Sun",
-                                "Volcanoes",
-                                "Wind"
-                            ],
-                            "correct": "The Sun"
-                        }
-                    ]
-                },
-                {
-                    "level": "hard",
-                    "questions": [
-                        {
-                            "question": "What is the atomic number of Oxygen?",
-                            "options": [
-                                "6",
-                                "8",
-                                "16"
-                            ],
-                            "correct": "8"
-                        },
-                        {
-                            "question": "What is the speed of light in a vacuum?",
-                            "options": [
-                                "300,000 km/s",
-                                "150,000 km/s",
-                                "500,000 km/s"
-                            ],
-                            "correct": "300,000 km/s"
-                        }
-                    ]
-                }
-            ]
+          "level": "medium",
+          "questions": [
+            {
+              "question": "What is the average time complexity of searching in a sorted array?",
+              "options": ["O(1)", "O(log n)", "O(n)"],
+              "correct": "O(log n)"
+            },
+            {
+              "question": "Which data structure is used to implement a queue in Python?",
+              "options": ["List", "Set", "Dictionary"],
+              "correct": "List"
+            }
+          ]
         },
         {
-            "name": "Math",
-            "levels": [
-                {
-                    "level": "easy",
-                    "questions": [
-                        {
-                            "question": "What is the square root of 64?",
-                            "options": [
-                                "6",
-                                "7",
-                                "8"
-                            ],
-                            "correct": "8"
-                        },
-                        {
-                            "question": "What is 15% of 200?",
-                            "options": [
-                                "25",
-                                "30",
-                                "35"
-                            ],
-                            "correct": "30"
-                        }
-                    ]
-                },
-                {
-                    "level": "medium",
-                    "questions": [
-                        {
-                            "question": "What is the result of 7 + 8 * 2?",
-                            "options": [
-                                "30",
-                                "23",
-                                "22"
-                            ],
-                            "correct": "23"
-                        },
-                        {
-                            "question": "Which is a prime number?",
-                            "options": [
-                                "4",
-                                "6",
-                                "7"
-                            ],
-                            "correct": "7"
-                        }
-                    ]
-                },
-                {
-                    "level": "hard",
-                    "questions": [
-                        {
-                            "question": "What is the derivative of x^2?",
-                            "options": [
-                                "x",
-                                "2x",
-                                "x^2"
-                            ],
-                            "correct": "2x"
-                        },
-                        {
-                            "question": "What is the value of Pi to 3 decimal places?",
-                            "options": [
-                                "3.142",
-                                "3.141",
-                                "3.140"
-                            ],
-                            "correct": "3.142"
-                        }
-                    ]
-                }
-            ]
+          "level": "hard",
+          "questions": [
+            {
+              "question": "What is the output of the expression 3 ** 2 ** 2 in Python?",
+              "options": ["81", "16", "256"],
+              "correct": "256"
+            },
+            {
+              "question": "What is the difference between a shallow copy and a deep copy in Python?",
+              "options": [
+                "Shallow copy duplicates only references, deep copy duplicates objects",
+                "Shallow copy duplicates objects, deep copy duplicates only references",
+                "They are the same"
+              ],
+              "correct": "Shallow copy duplicates only references, deep copy duplicates objects"
+            }
+          ]
         }
-    ]
+      ]
+    },
+    {
+      "name": "Science",
+      "levels": [
+        {
+          "level": "easy",
+          "questions": [
+            {
+              "question": "Which planet is known as the Red Planet?",
+              "options": ["Earth", "Mars", "Venus"],
+              "correct": "Mars"
+            },
+            {
+              "question": "What is the chemical symbol for water?",
+              "options": ["H2O", "O2", "CO2"],
+              "correct": "H2O"
+            }
+          ]
+        },
+        {
+          "level": "medium",
+          "questions": [
+            {
+              "question": "Which gas is most abundant in the Earth's atmosphere?",
+              "options": ["Oxygen", "Nitrogen", "Carbon Dioxide"],
+              "correct": "Nitrogen"
+            },
+            {
+              "question": "What is the primary source of energy for life on Earth?",
+              "options": ["The Sun", "Volcanoes", "Wind"],
+              "correct": "The Sun"
+            }
+          ]
+        },
+        {
+          "level": "hard",
+          "questions": [
+            {
+              "question": "What is the atomic number of Oxygen?",
+              "options": ["6", "8", "16"],
+              "correct": "8"
+            },
+            {
+              "question": "What is the speed of light in a vacuum?",
+              "options": ["300,000 km/s", "150,000 km/s", "500,000 km/s"],
+              "correct": "300,000 km/s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Math",
+      "levels": [
+        {
+          "level": "easy",
+          "questions": [
+            {
+              "question": "What is the square root of 64?",
+              "options": ["6", "7", "8"],
+              "correct": "8"
+            },
+            {
+              "question": "What is 15% of 200?",
+              "options": ["25", "30", "35"],
+              "correct": "30"
+            }
+          ]
+        },
+        {
+          "level": "medium",
+          "questions": [
+            {
+              "question": "What is the result of 7 + 8 * 2?",
+              "options": ["30", "23", "22"],
+              "correct": "23"
+            },
+            {
+              "question": "Which is a prime number?",
+              "options": ["4", "6", "7"],
+              "correct": "7"
+            }
+          ]
+        },
+        {
+          "level": "hard",
+          "questions": [
+            {
+              "question": "What is the derivative of x^2?",
+              "options": ["x", "2x", "x^2"],
+              "correct": "2x"
+            },
+            {
+              "question": "What is the value of Pi to 3 decimal places?",
+              "options": ["3.142", "3.141", "3.140"],
+              "correct": "3.142"
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "name": "Geography",
+      "levels": [
+        {
+          "level": "easy",
+          "questions": [
+            {
+              "question": "What is the capital of France?",
+              "options": ["Berlin", "Paris", "Madrid"],
+              "correct": "Paris"
+            },
+            {
+              "question": "Which continent is known as the 'Dark Continent'?",
+              "options": ["Africa", "Asia", "South America"],
+              "correct": "Africa"
+            }
+          ]
+        },
+        {
+          "level": "medium",
+          "questions": [
+            {
+              "question": "Which river is the longest in the world?",
+              "options": ["Amazon", "Nile", "Yangtze"],
+              "correct": "Nile"
+            },
+            {
+              "question": "What is the largest desert in the world?",
+              "options": ["Sahara", "Arctic Desert", "Gobi"],
+              "correct": "Sahara"
+            }
+          ]
+        },
+        {
+          "level": "hard",
+          "questions": [
+            {
+              "question": "Which country has the most time zones?",
+              "options": ["USA", "Russia", "France"],
+              "correct": "France"
+            },
+            {
+              "question": "What is the highest mountain outside Asia?",
+              "options": ["Mount Kilimanjaro", "Aconcagua", "Denali"],
+              "correct": "Aconcagua"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Object-Oriented Programming (OOP)",
+      "levels": [
+        {
+          "level": "easy",
+          "questions": [
+            {
+              "question": "What is an object in OOP?",
+              "options": [
+                "A function",
+                "An instance of a class",
+                "A data type"
+              ],
+              "correct": "An instance of a class"
+            },
+            {
+              "question": "Which keyword is used to define a class in Python?",
+              "options": ["class", "object", "define"],
+              "correct": "class"
+            }
+          ]
+        },
+        {
+          "level": "medium",
+          "questions": [
+            {
+              "question": "Which OOP principle promotes code reuse?",
+              "options": ["Encapsulation", "Inheritance", "Polymorphism"],
+              "correct": "Inheritance"
+            },
+            {
+              "question": "What is the purpose of the '__init__' method in Python classes?",
+              "options": [
+                "To initialize a class",
+                "To define a class name",
+                "To initialize object attributes"
+              ],
+              "correct": "To initialize object attributes"
+            }
+          ]
+        },
+        {
+          "level": "hard",
+          "questions": [
+            {
+              "question": "What is method overloading?",
+              "options": [
+                "Defining multiple methods with the same name but different arguments",
+                "Replacing a parent class method in a child class",
+                "A feature that doesn't exist in Python"
+              ],
+              "correct": "Defining multiple methods with the same name but different arguments"
+            },
+            {
+              "question": "What is the diamond problem in multiple inheritance?",
+              "options": [
+                "An issue where a class inherits the same attribute from multiple parents",
+                "A problem with recursion",
+                "A runtime error in polymorphism"
+              ],
+              "correct": "An issue where a class inherits the same attribute from multiple parents"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "File and Folder Structures",
+      "levels": [
+        {
+          "level": "easy",
+          "questions": [
+            {
+              "question": "What does the root folder represent in a file system?",
+              "options": [
+                "The parent directory of all files and folders",
+                "A folder within a directory",
+                "A hidden folder"
+              ],
+              "correct": "The parent directory of all files and folders"
+            },
+            {
+              "question": "Which symbol is commonly used to indicate the current directory?",
+              "options": [".", "..", "/"],
+              "correct": "."
+            }
+          ]
+        },
+        {
+          "level": "medium",
+          "questions": [
+            {
+              "question": "What does the 'mkdir' command do in most operating systems?",
+              "options": [
+                "Creates a new folder",
+                "Deletes a folder",
+                "Moves a folder"
+              ],
+              "correct": "Creates a new folder"
+            },
+            {
+              "question": "What is the difference between an absolute and a relative path?",
+              "options": [
+                "Absolute path starts from the root; relative path starts from the current directory",
+                "Absolute path uses special symbols; relative path does not",
+                "No difference"
+              ],
+              "correct": "Absolute path starts from the root; relative path starts from the current directory"
+            }
+          ]
+        },
+        {
+          "level": "hard",
+          "questions": [
+            {
+              "question": "In a file structure, what is the purpose of a '.gitignore' file?",
+              "options": [
+                "To list files and directories to ignore in version control",
+                "To delete unnecessary files",
+                "To store configurations"
+              ],
+              "correct": "To list files and directories to ignore in version control"
+            },
+            {
+              "question": "What does the 'symlink' (symbolic link) represent in file systems?",
+              "options": [
+                "A reference to another file or directory",
+                "A duplicate file",
+                "A hidden file"
+              ],
+              "correct": "A reference to another file or directory"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Databases",
+      "levels": [
+        {
+          "level": "easy",
+          "questions": [
+            {
+              "question": "What is a database?",
+              "options": [
+                "A collection of organized data",
+                "A type of file system",
+                "A software library"
+              ],
+              "correct": "A collection of organized data"
+            },
+            {
+              "question": "What does SQL stand for?",
+              "options": [
+                "Structured Query Language",
+                "Simple Query Language",
+                "Sequential Query Language"
+              ],
+              "correct": "Structured Query Language"
+            }
+          ]
+        },
+        {
+          "level": "medium",
+          "questions": [
+            {
+              "question": "Which SQL command is used to fetch data from a database?",
+              "options": ["SELECT", "INSERT", "UPDATE"],
+              "correct": "SELECT"
+            },
+            {
+              "question": "What is a primary key in a database?",
+              "options": [
+                "A unique identifier for each record",
+                "A foreign key in a table",
+                "A key that encrypts data"
+              ],
+              "correct": "A unique identifier for each record"
+            }
+          ]
+        },
+        {
+          "level": "hard",
+          "questions": [
+            {
+              "question": "What is the difference between OLTP and OLAP?",
+              "options": [
+                "OLTP is for transactional processing; OLAP is for analytical processing",
+                "OLTP is for analytics; OLAP is for transactions",
+                "Both are the same"
+              ],
+              "correct": "OLTP is for transactional processing; OLAP is for analytical processing"
+            },
+            {
+              "question": "What is a database index, and why is it used?",
+              "options": [
+                "A data structure to speed up search queries",
+                "A backup of a database",
+                "A summary of database tables"
+              ],
+              "correct": "A data structure to speed up search queries"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
