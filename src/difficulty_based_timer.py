@@ -99,7 +99,7 @@ class DifficultyTimer:
             'on_resume': [],
             'on_difficulty_change': []
         }
-
+    
     def change_difficulty(self, new_difficulty: str):
         """Change difficulty level and reset timer
         Args:
@@ -189,7 +189,10 @@ class DifficultyTimer:
         """
         for callback in self.callbacks[event]:
             callback(self.remaining_time)
-
+    def _trigger_callbacks(self, event: str):
+        """Trigger all callbacks associated with a specific event."""
+        for callback in self.callbacks.get(event, []):
+            callback(self.remaining_time)
     @property
     def time_left(self) -> int:
         """Get remaining time in seconds"""
