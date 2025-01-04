@@ -68,3 +68,43 @@ class CategoryManager:
         data = self._load_data()
         return [category["name"] for category in data["categories"]]
 
+# update category
+    def update_category(self, name: str, new_name: Optional[str] = None, 
+                       new_levels: Optional[List] = None) -> bool:
+        """
+        Update a category's name and/or levels
+        Returns True if successful, False if category not found
+        """
+        data = self._load_data()
+        
+        for category in data["categories"]:
+            if category["name"].lower() == name.lower():
+                if new_name:
+                    category["name"] = new_name
+                if new_levels:
+                    category["levels"] = new_levels
+                self._save_data(data)
+                return True
+        return False
+#delete category
+    def delete_category(self, name: str) -> bool:
+        """
+        Delete a category by name
+        Returns True if successful, False if category not found
+        """
+        data = self._load_data()
+        initial_length = len(data["categories"])
+        
+        data["categories"] = [cat for cat in data["categories"] if cat["name"] != name]
+        
+        if len(data["categories"]) < initial_length:
+            self._save_data(data)
+            return True
+        return False
+
+
+    
+    
+    
+
+  
