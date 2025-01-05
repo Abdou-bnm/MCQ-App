@@ -68,7 +68,7 @@ class CategoryManager:
         """Get a category by name"""
         data = self._load_data()
         for category in data["categories"]:
-            if category["name"] == name:
+            if category["name"] == name.lower():
                 return category
         return None
 # get list of categories 
