@@ -13,7 +13,7 @@
                                 "func",
                                 "lambda"
                             ],
-                            "correct": "def",
+                            "correct": 0,
                             "id": 1
                         },
                         {
@@ -23,7 +23,7 @@
                                 "Calculates logarithm",
                                 "Counts occurrences of an element"
                             ],
-                            "correct": "Returns the length of a string",
+                            "correct": 0,
                             "id": 2
                         }
                     ]
@@ -38,7 +38,7 @@
                                 "O(log n)",
                                 "O(n)"
                             ],
-                            "correct": "O(log n)",
+                            "correct": 1,
                             "id": 3
                         },
                         {
@@ -48,7 +48,7 @@
                                 "Set",
                                 "Dictionary"
                             ],
-                            "correct": "List",
+                            "correct": 0,
                             "id": 4
                         }
                     ]
@@ -63,7 +63,7 @@
                                 "16",
                                 "256"
                             ],
-                            "correct": "256",
+                            "correct": 2,
                             "id": 5
                         },
                         {
@@ -73,7 +73,7 @@
                                 "Shallow copy duplicates objects, deep copy duplicates only references",
                                 "They are the same"
                             ],
-                            "correct": "Shallow copy duplicates only references, deep copy duplicates objects",
+                            "correct": 0,
                             "id": 6
                         }
                     ]
@@ -93,7 +93,7 @@
                                 "Mars",
                                 "Venus"
                             ],
-                            "correct": "Mars",
+                            "correct": 1,
                             "id": 7
                         },
                         {
@@ -103,7 +103,7 @@
                                 "O2",
                                 "CO2"
                             ],
-                            "correct": "H2O",
+                            "correct": 0,
                             "id": 8
                         }
                     ]
@@ -118,7 +118,7 @@
                                 "Nitrogen",
                                 "Carbon Dioxide"
                             ],
-                            "correct": "Nitrogen",
+                            "correct": 1,
                             "id": 9
                         },
                         {
@@ -128,7 +128,7 @@
                                 "Volcanoes",
                                 "Wind"
                             ],
-                            "correct": "The Sun",
+                            "correct": 0,
                             "id": 10
                         }
                     ]
@@ -143,7 +143,7 @@
                                 "8",
                                 "16"
                             ],
-                            "correct": "8",
+                            "correct": 1,
                             "id": 11
                         },
                         {
@@ -153,7 +153,7 @@
                                 "150,000 km/s",
                                 "500,000 km/s"
                             ],
-                            "correct": "300,000 km/s",
+                            "correct": 0,
                             "id": 12
                         }
                     ]
@@ -173,7 +173,7 @@
                                 "7",
                                 "8"
                             ],
-                            "correct": "8",
+                            "correct": 2,
                             "id": 13
                         },
                         {
@@ -183,7 +183,7 @@
                                 "30",
                                 "35"
                             ],
-                            "correct": "30",
+                            "correct": 1,
                             "id": 14
                         }
                     ]
@@ -198,7 +198,7 @@
                                 "23",
                                 "22"
                             ],
-                            "correct": "23",
+                            "correct": 1,
                             "id": 15
                         },
                         {
@@ -208,7 +208,7 @@
                                 "6",
                                 "7"
                             ],
-                            "correct": "7",
+                            "correct": 2,
                             "id": 16
                         }
                     ]
@@ -223,7 +223,7 @@
                                 "2x",
                                 "x^2"
                             ],
-                            "correct": "2x",
+                            "correct": 1,
                             "id": 17
                         },
                         {
@@ -233,7 +233,7 @@
                                 "3.141",
                                 "3.140"
                             ],
-                            "correct": "3.142",
+                            "correct": 0,
                             "id": 18
                         }
                     ]
@@ -253,7 +253,7 @@
                                 "Paris",
                                 "Madrid"
                             ],
-                            "correct": "Paris",
+                            "correct": 1,
                             "id": 19
                         },
                         {
@@ -263,7 +263,7 @@
                                 "Asia",
                                 "South America"
                             ],
-                            "correct": "Africa",
+                            "correct": 0,
                             "id": 20
                         }
                     ]
@@ -278,7 +278,7 @@
                                 "Nile",
                                 "Yangtze"
                             ],
-                            "correct": "Nile",
+                            "correct": 1,
                             "id": 21
                         },
                         {
@@ -288,7 +288,7 @@
                                 "Arctic Desert",
                                 "Gobi"
                             ],
-                            "correct": "Sahara",
+                            "correct": 0,
                             "id": 22
                         }
                     ]
@@ -303,7 +303,7 @@
                                 "Russia",
                                 "France"
                             ],
-                            "correct": "France",
+                            "correct": 2,
                             "id": 23
                         },
                         {
@@ -313,7 +313,7 @@
                                 "Aconcagua",
                                 "Denali"
                             ],
-                            "correct": "Aconcagua",
+                            "correct": 1,
                             "id": 24
                         }
                     ]
@@ -333,7 +333,7 @@
                                 "An instance of a class",
                                 "A data type"
                             ],
-                            "correct": "An instance of a class",
+                            "correct": 1,
                             "id": 25
                         },
                         {
@@ -343,7 +343,7 @@
                                 "object",
                                 "define"
                             ],
-                            "correct": "class",
+                            "correct": 0,
                             "id": 26
                         }
                     ]
@@ -358,7 +358,7 @@
                                 "Inheritance",
                                 "Polymorphism"
                             ],
-                            "correct": "Inheritance",
+                            "correct": 1,
                             "id": 27
                         },
                         {
@@ -368,7 +368,7 @@
                                 "To define a class name",
                                 "To initialize object attributes"
                             ],
-                            "correct": "To initialize object attributes",
+                            "correct": 2,
                             "id": 28
                         }
                     ]
@@ -383,7 +383,7 @@
                                 "Replacing a parent class method in a child class",
                                 "A feature that doesn't exist in Python"
                             ],
-                            "correct": "Defining multiple methods with the same name but different arguments",
+                            "correct": 0,
                             "id": 29
                         },
                         {
@@ -393,7 +393,7 @@
                                 "A problem with recursion",
                                 "A runtime error in polymorphism"
                             ],
-                            "correct": "An issue where a class inherits the same attribute from multiple parents",
+                            "correct": 0,
                             "id": 30
                         }
                     ]
@@ -413,7 +413,7 @@
                                 "A folder within a directory",
                                 "A hidden folder"
                             ],
-                            "correct": "The parent directory of all files and folders",
+                            "correct": 0,
                             "id": 31
                         },
                         {
@@ -423,7 +423,7 @@
                                 "..",
                                 "/"
                             ],
-                            "correct": ".",
+                            "correct": 0,
                             "id": 32
                         }
                     ]
@@ -438,7 +438,7 @@
                                 "Deletes a folder",
                                 "Moves a folder"
                             ],
-                            "correct": "Creates a new folder",
+                            "correct": 0,
                             "id": 33
                         },
                         {
@@ -448,7 +448,7 @@
                                 "Absolute path uses special symbols; relative path does not",
                                 "No difference"
                             ],
-                            "correct": "Absolute path starts from the root; relative path starts from the current directory",
+                            "correct": 0,
                             "id": 34
                         }
                     ]
@@ -463,7 +463,7 @@
                                 "To delete unnecessary files",
                                 "To store configurations"
                             ],
-                            "correct": "To list files and directories to ignore in version control",
+                            "correct": 0,
                             "id": 35
                         },
                         {
@@ -473,7 +473,7 @@
                                 "A duplicate file",
                                 "A hidden file"
                             ],
-                            "correct": "A reference to another file or directory",
+                            "correct": 0,
                             "id": 36
                         }
                     ]
@@ -493,7 +493,7 @@
                                 "A type of file system",
                                 "A software library"
                             ],
-                            "correct": "A collection of organized data",
+                            "correct": 0,
                             "id": 37
                         },
                         {
@@ -503,7 +503,7 @@
                                 "Simple Query Language",
                                 "Sequential Query Language"
                             ],
-                            "correct": "Structured Query Language",
+                            "correct": 0,
                             "id": 38
                         }
                     ]
@@ -518,7 +518,7 @@
                                 "INSERT",
                                 "UPDATE"
                             ],
-                            "correct": "SELECT",
+                            "correct": 0,
                             "id": 39
                         },
                         {
@@ -528,7 +528,7 @@
                                 "A foreign key in a table",
                                 "A key that encrypts data"
                             ],
-                            "correct": "A unique identifier for each record",
+                            "correct": 0,
                             "id": 40
                         }
                     ]
@@ -543,7 +543,7 @@
                                 "OLTP is for analytics; OLAP is for transactions",
                                 "Both are the same"
                             ],
-                            "correct": "OLTP is for transactional processing; OLAP is for analytical processing",
+                            "correct": 0,
                             "id": 41
                         },
                         {
@@ -553,7 +553,7 @@
                                 "A backup of a database",
                                 "A summary of database tables"
                             ],
-                            "correct": "A data structure to speed up search queries",
+                            "correct": 0,
                             "id": 42
                         }
                     ]
