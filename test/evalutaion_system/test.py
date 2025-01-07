@@ -2,7 +2,7 @@ import json
 import os
 import sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from evaluation_system import EvaluationSystem
+from evalutaion_system.main import EvaluationSystem
 
 def evaluation_test(user_id, category):
     # Create data directory if it doesn't exist
@@ -99,7 +99,7 @@ def evaluation_test(user_id, category):
     print(evaluator.generate_feedback_summary())
     
     # Update user history
-    evaluator.update_user_history(user_id, final_score)
+    evaluator.update_user_history(user_id, final_score, category)
     
     # Export results
     result_file = evaluator.export_results(user_id, category, final_score)
