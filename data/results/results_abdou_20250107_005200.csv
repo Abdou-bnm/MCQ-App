@@ -1,0 +1,6 @@
+Username,Category,Date,Score,Total Questions,Percentage
+abdou,Python,2025-01-07 00:52:00,1,2,50.0
+
+Detailed Feedback
+What is the output of the expression 3 ** 2 ** 2 in Python?,Correct,Your answer: 256,Correct answer: 256
+What is the difference between a shallow copy and a deep copy in Python?,Incorrect,"Your answer: Shallow copy duplicates objects, deep copy duplicates only references","Correct answer: Shallow copy duplicates only references, deep copy duplicates objects"
