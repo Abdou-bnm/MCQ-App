@@ -82,11 +82,19 @@ class EvaluationSystem:
         Export results to a CSV file
         """
         
-        if not os.path.exists('data/results'):
-            os.makedirs('data/results')
+        base_dir = 'data/results'
+        
+        user_dir = os.path.join(base_dir, username)
+        
+        if not os.path.exists(user_dir):
+            try:
+                os.makedirs(user_dir)
+            except Exception as e:
+                print(f"Error creating user directory: {e}")
             
+                        
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        filename = f"data/results/results_{username}_{timestamp}.csv"
+        filename = os.path.join(user_dir,f"results_{username}_{timestamp}.csv")
         
         try:
             with open(filename, 'w', newline='') as file:
