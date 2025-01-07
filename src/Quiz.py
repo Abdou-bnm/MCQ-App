@@ -3,6 +3,7 @@ from evaluation_system import EvaluationSystem
 from rich.console import Console
 from rich.prompt import Prompt
 from rich.panel import Panel
+from rich.align import Align
 console = Console()
 
 
@@ -19,10 +20,10 @@ class Quiz:
         level = q_manager.select_level(category)
         questions = q_manager.get_questions(category, level)
 
-        console.print(Panel(f"🚀 [bold green]Starting quiz in {category} - {level} level[/bold green]",border_style="green"))
+        console.print(Panel(Align.center(f"🚀 [bold green]Starting quiz in {category} - {level} level[/bold green]"),border_style="green"))
 
         for idx, question in enumerate(questions, 1):
-            console.print(Panel(f"❓ [bold yellow]Question {idx}: {question['question']}[/bold yellow]",border_style="yellow"))
+            console.print(Panel(Align.center(f"❓ [bold yellow]Question {idx}: {question['question']}[/bold yellow]"),border_style="yellow"))
             for i, option in enumerate(question['options']):
                 console.print(f"{i + 1}. {option}")
 
