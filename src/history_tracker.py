@@ -9,7 +9,11 @@ console = Console()
 
 class HistoryTracker:
     FILE_PATH = "data/users.json"
-    RESULT_DIR = "data/results/"
+    RESULT_DIR = ""
+    
+    @staticmethod
+    def username_dir(username):
+        HistoryTracker.RESULT_DIR = f"data/results/{username}"
         
     @staticmethod
     def display_detailed_history(username):
@@ -39,9 +43,12 @@ class HistoryTracker:
         """
         Display details of a specific quiz attempt including metadata and results.
         """
+        HistoryTracker.username_dir(username)
         result_files = [f for f in os.listdir(HistoryTracker.RESULT_DIR) if f.startswith(f"results_{username}_") and f.endswith('.csv')]
         if not result_files:
             console.print(Panel("😔 [red]No previous results found.[/red]", border_style="blue"))
+            input("**Press any key to return to home page**")
+            console.print(Panel("🏠 [bold yellow]Returning to home page...[/bold yellow]", border_style="yellow"))
             return
 
         console.print(Panel("[bold yellow]📁 Available Tests:[/bold yellow]", border_style="blue"))

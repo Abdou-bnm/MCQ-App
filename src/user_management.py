@@ -3,7 +3,6 @@ import os
 from rich.console import Console
 from rich.panel import Panel
 from rich.align import Align
-from history_tracker import HistoryTracker
 
 console = Console()
 

@@ -4,230 +4,30 @@
         "role": "admin",
         "history": []
     },
-    "student1": {
-        "password": "pass123",
-        "role": "student",
-        "history": [
-            {
-                "category": "python",
-                "score": 0,
-                "date": "Mon Dec 30 21:58:10 2024"
-            },
-            {
-                "category": "python",
-                "score": 0,
-                "date": "Mon Dec 30 21:58:10 2024"
-            }
-        ]
-    },
-    "test": {
-        "password": "test",
-        "role": "student",
-        "history": [
-            {
-                "category": "python",
-                "score": 0,
-                "date": "Mon Dec 30 21:58:10 2024"
-            },
-            {
-                "date": "Mon Dec 30 22:18:20 2024",
-                "category": "python",
-                "score": 2
-            },
-            {
-                "date": "Mon Dec 30 22:18:26 2024",
-                "category": "null",
-                "score": 0
-            }
-        ]
-    },
     "abdou": {
         "password": "abdou",
         "role": "student",
         "history": [
             {
-                "date": "2024-12-31 13:27:41",
-                "category": "python",
-                "score": "1/1"
-            },
-            {
-                "date": "2024-12-31 13:51:17",
-                "category": "python",
-                "score": "1/1"
-            },
-            {
-                "date": "2025-01-01 01:45:55",
-                "category": "python",
-                "score": "2/3"
-            },
-            {
-                "date": "2025-01-01 01:46:16",
-                "category": "Science",
-                "score": "3/3"
-            },
-            {
-                "date": "2025-01-01 01:46:38",
-                "category": "python",
-                "score": "0/3"
-            },
-            {
-                "date": "2025-01-01 11:52:24",
-                "category": "python",
-                "score": "3/3"
-            },
-            {
-                "date": "2025-01-01 12:34:58",
-                "category": "python",
-                "score": "1/3"
-            },
-            {
-                "date": "2025-01-01 20:20:34",
-                "category": "python",
-                "score": "2/3"
-            },
-            {
-                "date": "2025-01-06 16:50:57",
-                "category": "Databases",
-                "score": "2/2"
-            },
-            {
-                "date": "2025-01-06 16:52:51",
+                "date": "2025-01-07 10:37:27",
                 "category": "Python",
                 "score": "2/2"
             },
             {
-                "date": "2025-01-06 16:55:27",
+                "date": "2025-01-07 10:44:33",
+                "category": "Math",
+                "score": "1/2"
+            },
+            {
+                "date": "2025-01-07 10:54:22",
                 "category": "Python",
                 "score": "1/2"
             },
             {
-                "date": "2025-01-06 17:12:03",
+                "date": "2025-01-07 11:04:26",
                 "category": "Python",
                 "score": "0/2"
-            },
-            {
-                "date": "2025-01-06 18:13:17",
-                "category": "Python",
-                "score": "0/2"
-            },
-            {
-                "date": "2025-01-06 18:34:39",
-                "category": "Python",
-                "score": "0/2"
-            },
-            {
-                "date": "2025-01-06 18:38:40",
-                "category": "Python",
-                "score": "0/2"
-            },
-            {
-                "date": "2025-01-06 20:40:37",
-                "category": "Python",
-                "score": "1/2"
-            },
-            {
-                "date": "2025-01-06 21:17:23",
-                "category": "Python",
-                "score": "1/2"
-            },
-            {
-                "date": "2025-01-06 21:22:30",
-                "category": "Python",
-                "score": "1/2"
-            },
-            {
-                "date": "2025-01-06 21:26:11",
-                "category": "Python",
-                "score": "2/2"
-            },
-            {
-                "date": "2025-01-06 21:30:49",
-                "category": "Python",
-                "score": "1/2"
-            },
-            {
-                "date": "2025-01-06 21:32:53",
-                "category": "Python",
-                "score": "1/2"
-            },
-            {
-                "date": "2025-01-06 21:49:15",
-                "category": "Python",
-                "score": "1/2"
-            },
-            {
-                "date": "2025-01-06 22:26:29",
-                "category": "Python",
-                "score": "0/2"
-            },
-            {
-                "date": "2025-01-06 22:59:55",
-                "category": "Python",
-                "score": "1/2"
-            },
-            {
-                "date": "2025-01-06 23:08:50",
-                "category": "Python",
-                "score": "1/2"
-            },
-            {
-                "date": "2025-01-06 23:47:11",
-                "category": "Python",
-                "score": "0/2"
-            },
-            {
-                "date": "2025-01-07 00:38:57",
-                "category": "Python",
-                "score": "1/2"
-            },
-            {
-                "date": "2025-01-07 00:43:06",
-                "category": "Python",
-                "score": "1/2"
-            },
-            {
-                "date": "2025-01-07 00:50:01",
-                "category": "Python",
-                "score": "1/2"
-            },
-            {
-                "date": "2025-01-07 00:50:10",
-                "category": "Python",
-                "score": "0/2"
-            },
-            {
-                "date": "2025-01-07 00:50:33",
-                "category": "Python",
-                "score": "0/2"
-            },
-            {
-                "date": "2025-01-07 00:52:00",
-                "category": "Python",
-                "score": "1/2"
-            },
-            {
-                "date": "2025-01-07 00:52:37",
-                "category": "Python",
-                "score": "1/2"
-            },
-            {
-                "date": "2025-01-07 01:02:53",
-                "category": "Python",
-                "score": "1/2"
-            },
-            {
-                "date": "2025-01-07 01:18:53",
-                "category": "Python",
-                "score": "0/2"
-            },
-            {
-                "date": "2025-01-07 01:36:49",
-                "category": "Python",
-                "score": "1/2"
             }
         ]
-    },
-    "1": {
-        "history": []
     }
 }

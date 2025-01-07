@@ -52,7 +52,6 @@ class Quiz:
         
         input("**Press any key to return to home page**")
         console.print(Panel("🏠 [bold yellow]Returning to home page...[/bold yellow]", border_style="yellow"))
-        console.clear()
 
     @staticmethod
     def display_final_score(username, category, score_data):

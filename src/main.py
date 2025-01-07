@@ -18,7 +18,7 @@ if __name__ == "__main__":
     
     user_manager = UserManager()
     username = user_manager.get_or_create_user()
-
+    
     while True:
         display_home()
         choice = Prompt.ask("[bold yellow]Choose an option [/bold yellow]", choices=["1", "2", "3"])
@@ -28,7 +28,6 @@ if __name__ == "__main__":
         elif choice == "2":
             HistoryTracker.display_detailed_history(username) 
             HistoryTracker.display_result_details(username)
-            console.clear() 
         elif choice == "3":
             console.print("👋 [bold yellow]Goodbye![/bold yellow] ")
             break
