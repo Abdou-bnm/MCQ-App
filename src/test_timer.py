@@ -1,5 +1,5 @@
 import time
-from controllers.difficulty_based_timer import DifficultyTimer
+from difficulty_based_timer import DifficultyTimer
 # Define test callback functions
 def on_tick(remaining_time):
     print(f"Tick: {remaining_time} seconds left")
