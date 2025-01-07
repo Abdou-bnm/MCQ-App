@@ -1,34 +1,98 @@
 {
-    "Python_Basics": [
+    "python": [
         {
-            "question": "What is Python?",
+            "question": "What is the average time complexity of searching in a sorted array?",
             "options": [
-                "A snake",
-                "A programming language",
-                "A video game",
-                "A movie"
+                "O(1)",
+                "O(log n)",
+                "O(n)"
             ],
-            "answer": 1
+            "correct": "b"
         },
         {
-            "question": "Which symbol is used for comments in Python?",
+            "question": "Which keyword is used to define a function in Python?",
             "options": [
-                "//",
-                "#",
-                "/*",
-                "$$"
+                "def",
+                "func",
+                "lambda"
             ],
-            "answer": 1
+            "correct": "a"
         },
         {
-            "question": "What is the correct file extension for Python files?",
+            "question": "What does the 'len()' function do in Python?",
             "options": [
-                ".py",
-                ".python",
-                ".pt",
-                ".pyt"
+                "Returns the length of a string",
+                "Calculates logarithm",
+                "Counts occurrences of an element"
             ],
-            "answer": 0
+            "correct": "a"
+        }
+    ],
+    "Science": [
+        {
+            "question": "Which planet is known as the Red Planet?",
+            "options": [
+                "Earth",
+                "Mars",
+                "Venus"
+            ],
+            "correct": "b"
+        },
+        {
+            "question": "What is the chemical symbol for water?",
+            "options": [
+                "H2O",
+                "O2",
+                "CO2"
+            ],
+            "correct": "a"
+        },
+        {
+            "question": "Which gas is most abundant in the Earth's atmosphere?",
+            "options": [
+                "Oxygen",
+                "Nitrogen",
+                "Carbon Dioxide"
+            ],
+            "correct": "b"
+        }
+    ],
+    "Math": [
+        {
+            "question": "What is the square root of 64?",
+            "options": [
+                "6",
+                "7",
+                "8"
+            ],
+            "correct": "c"
+        },
+        {
+            "question": "What is the result of 7 + 8 * 2?",
+            "options": [
+                "30",
+                "23",
+                "22"
+            ],
+            "correct": "b"
+        },
+        {
+            "question": "What is 15% of 200?",
+            "options": [
+                "25",
+                "30",
+                "35"
+            ],
+            "correct": "b"
+        },
+        {
+            "question": "Which is a prime number?",
+            "options": [
+                "4",
+                "6",
+                "7"
+            ],
+            "correct": "c"
         }
     ]
 }

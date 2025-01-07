@@ -51,7 +51,7 @@ class EvaluationSystem:
         return "\n".join(summary)
     
     
-    def update_user_history(self, username, score):
+    def update_user_history(self, username, score, category):
         """
         Update user's history in the JSON file with data folder path
         """
@@ -63,7 +63,8 @@ class EvaluationSystem:
                 current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
                 new_entry = {
                     "date": current_time,
-                    "score": score["raw_score"]
+                    "category": category, 
+                    "score": f"{score['raw_score']}/{score['total_questions']}"
                 }
                 users_data[username]["history"].append(new_entry)
                 
