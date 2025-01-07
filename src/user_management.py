@@ -3,6 +3,7 @@ import os
 from rich.console import Console
 from rich.panel import Panel
 from rich.align import Align
+from history_tracker import HistoryTracker
 
 console = Console()
 
@@ -26,6 +27,7 @@ class UserManager:
                 json.dump(users, file, indent=4)
         else:
             console.print(Panel(Align.center(f"[bold cyan]🌟 Welcome back, {username}! 🌟[/bold cyan]"), border_style="blue"))
+            HistoryTracker.display_detailed_history(username) 
         return username
 
         
