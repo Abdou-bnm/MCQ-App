@@ -96,4 +96,70 @@ class QuestionManager:
         # we haven't found the qst
         print(f"Question with ID {id} not found.")
 
-        
+    def edit_question(self, id, new_question_text=None, new_options=None, new_correct=None):
+        """
+        Edit an existing question by its unique ID.
+
+        Args:
+            id (int): The unique ID of the question to edit.
+            new_question_text (str): The new question text (optional).
+            new_options (list): The new list of options (optional).
+            new_correct (int): The new correct option index (optional).
+
+        Returns:
+            None
+        """
+        data = self.categorymanager._load_data()
+        question_found = False
+
+        # Iterate through categories, levels, and questions to find the question by ID
+        for category in data["categories"]:
+            for level in category["levels"]:
+                for question in level["questions"]:
+                    if question["id"] == id:
+                        question_found = True
+                        # Update the question fields if provided
+                        if new_question_text:
+                            question["question"] = new_question_text
+                        if new_options:
+                            question["options"] = new_options
+                        if new_correct is not None:
+                            if 0 <= new_correct < len(question["options"]):
+                                question["correct"] = new_correct
+                            else:
+                                print("Error: New correct answer index is out of range.")
+                                return
+
+                        print(f"Question with ID {id} updated successfully.")
+                        self.categorymanager._save_data(data)
+                        return
+
+        if not question_found:
+            print(f"Question with ID {id} not found.")
+
+    def delete_question(self, id):
+        """
+        Delete a question by its unique ID.
+
+        Args:
+            id (int): The unique ID of the question to delete.
+
+        Returns:
+            None
+        """
+        data = self.categorymanager._load_data()
+        question_found = False
+
+        # Iterate through categories and levels to find and delete the question
+        for category in data["categories"]:
+            for level in category["levels"]:
+                for question in level["questions"]:
+                    if question["id"] == id:
+                        level["questions"].remove(question)
+                        question_found = True
+                        print(f"Question with ID {id} deleted successfully.")
+                        self.categorymanager._save_data(data)
+                        return
+
+        if not question_found:
+            print(f"Question with ID {id} not found.")
