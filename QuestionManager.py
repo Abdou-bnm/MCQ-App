@@ -58,6 +58,7 @@ class QuestionManager:
         # we added the question now we need to update in in the questions.json file
         self.categorymanager._save_data(questions)
         print("question added succesfully")
+        return id
 
     def load_question(self,id):
         data=self.categorymanager._load_data()
