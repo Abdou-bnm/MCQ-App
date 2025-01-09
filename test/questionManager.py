@@ -1,5 +1,5 @@
 from category import CategoryManager
-from QuestionManager import QuestionManager
+from src.Logic.QuestionManager import QuestionManager
 
 cat=CategoryManager(file_path="question1.json")
 
