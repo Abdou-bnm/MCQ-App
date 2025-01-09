@@ -4,7 +4,7 @@ import sys
 from Logic.category import CategoryManager
 
 
-manager = CategoryManager("./data/questions_test.json")
+manager = CategoryManager("./test/category/data/questions_test.json")
 
 def create_category_demo():
     categories_to_create = ["Math", "Science", "History", "Literature", "Technology"]
