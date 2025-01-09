@@ -1,23 +1,6 @@
 {
     "categories": [
         {
-            "name": "Advanced Math",
-            "levels": [
-                {
-                    "level": "easy",
-                    "questions": []
-                },
-                {
-                    "level": "medium",
-                    "questions": []
-                },
-                {
-                    "level": "hard",
-                    "questions": []
-                }
-            ]
-        },
-        {
             "name": "Science",
             "levels": [
                 {
@@ -36,40 +19,6 @@
         },
         {
             "name": "World History",
-            "levels": [
-                {
-                    "level": "easy",
-                    "questions": []
-                },
-                {
-                    "level": "medium",
-                    "questions": []
-                },
-                {
-                    "level": "hard",
-                    "questions": []
-                }
-            ]
-        },
-        {
-            "name": "Literature",
-            "levels": [
-                {
-                    "level": "easy",
-                    "questions": []
-                },
-                {
-                    "level": "medium",
-                    "questions": []
-                },
-                {
-                    "level": "hard",
-                    "questions": []
-                }
-            ]
-        },
-        {
-            "name": "Technology",
             "levels": [
                 {
                     "level": "easy",
