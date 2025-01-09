@@ -56,6 +56,44 @@ class QuestionManager:
                         break  
         
         # we added the question now we need to update in in the questions.json file
-        self.categorymanager._save_data(questions);
+        self.categorymanager._save_data(questions)
+        print("question added succesfully")
+
+    def load_question(self,id):
+        data=self.categorymanager._load_data()
+
+        question = False
+        for category in data["categories"]:
+            for level in category["levels"]:
+                for q in level["questions"]:
+                    if q["id"] == id:
+                        print(f"Question found: {question}")
+                        question=q
+                        break
+        
+        if question:
+                    # we found the question now we print it , and its options
+                    print(f"Question: {question['question']}")
+                    print("Options:")
+                    for idx, option in enumerate(question["options"], 1):
+                        print(f"{idx}. {option}")
+                    # now we ask for the user's input(answer)
+                    while True:
+                        try:
+                            user_answer = int(input("Enter the number of your answer: "))
+                            if 1 <= user_answer <= len(question["options"]):
+                                break
+                        except ValueError:
+                            print("Invalid input. Please enter a number.")
+
+                    if user_answer==question["correct"]+1:
+                        print("correct answer")
+                        return True
+                    else:
+                        print("wrong answer")
+                        return False
+                    
+        # we haven't found the qst
+        print(f"Question with ID {id} not found.")
 
         
