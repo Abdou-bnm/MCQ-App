@@ -559,6 +559,23 @@
                     ]
                 }
             ]
+        },
+        {
+            "name": "new",
+            "levels": [
+                {
+                    "level": "easy",
+                    "questions": []
+                },
+                {
+                    "level": "medium",
+                    "questions": []
+                },
+                {
+                    "level": "hard",
+                    "questions": []
+                }
+            ]
         }
     ]
 }

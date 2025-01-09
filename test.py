@@ -3,12 +3,16 @@ from QuestionManager import QuestionManager
 
 cat=CategoryManager(file_path="question1.json")
 
-# liist=cat.read_category("databases")
-# print(liist)
 
-# qm=QuestionManager(file_path="question1.json")
-# qm.add_question("new","hard","what is 1+2",[1,4,6,3],3)
-qm.load_question(34)
+
+qm=QuestionManager(file_path="question1.json")
+new_quest=qm.add_question("new","easy","what is 1+2",[1,4,6,3],2)
+qm.load_question(new_quest)
+qm.edit_question(new_quest,new_correct=3)
+qm.load_question(new_quest)
+qm.delete_question(new_quest)
+qm.load_question(new_quest)
+
 
 
 
