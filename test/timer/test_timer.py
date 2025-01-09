@@ -1,5 +1,5 @@
 import time
-from difficulty_based_timer import DifficultyTimer
+from Logic.difficulty_based_timer import DifficultyTimer
 
 # Create a timer instance with the default difficulty (easy)
 timer = DifficultyTimer(difficulty="easy")

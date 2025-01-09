@@ -3,7 +3,7 @@ import os
 from typing import List, Dict, Optional, Union
 
 class CategoryManager:
-    def __init__(self, file_path: str = "questions_1_copy.json"):
+    def __init__(self, file_path: str = "questions.json"):
         self.file_path = file_path
     #load categories    
     def _load_data(self) -> Dict:

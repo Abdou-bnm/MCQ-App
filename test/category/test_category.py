@@ -1,8 +1,10 @@
 import time
-from category import CategoryManager
 import os
+import sys
+from Logic.category import CategoryManager
 
-manager = CategoryManager("./questions_1_copy.json")
+
+manager = CategoryManager("./data/questions_test.json")
 
 def create_category_demo():
     categories_to_create = ["Math", "Science", "History", "Literature", "Technology"]
@@ -40,11 +42,6 @@ def delete_category_demo():
     print("Categories after deletion:", categories)
     time.sleep(2)
 
-file_path = "questions_1_copy.json"
-if not os.path.exists(file_path):
-    print(f"File not found. Creating new file: {file_path}")
-else:
-    print(f"File found at {file_path}")
 
 create_category_demo()
 update_category_demo()
