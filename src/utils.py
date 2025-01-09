@@ -3,7 +3,7 @@ import os
 
 
 data_file = 'data/users.json'
-questions_file = 'data/questions.json'
+questions_file = 'data/questions_1.json'
 
 if not os.path.exists('data'):
     os.makedirs('data')
