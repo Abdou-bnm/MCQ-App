@@ -26,7 +26,7 @@ class UserManager:
             with open(self.FILE_PATH, 'w') as file:
                 json.dump(users, file, indent=4)
         else:
-            console.print(Panel(Align.center(f"[bold cyan]🌟 Welcome back, {username}! 🌟[/bold cyan]"), border_style="blue"))
+            console.print(Panel(Align.center(f"[bold cyan]🌟 Welcome back, {username}! 🌟[/bold cyan]"), border_style="blue", width=48))
             HistoryTracker.display_detailed_history(username) 
         return username
 

@@ -51,7 +51,7 @@ class HistoryTracker:
             console.print(Panel("🏠 [bold yellow]Returning to home page...[/bold yellow]", border_style="yellow"))
             return
 
-        console.print(Panel("[bold yellow]📁 Available Tests:[/bold yellow]", border_style="blue"))
+        console.print(Panel("[bold yellow]📁 Available Tests:[/bold yellow]", border_style="blue",width=48))
         console.print("[bold red]0. Return to home page [/bold red]")
         for idx, file in enumerate(result_files, 1):
             console.print(f"{idx}. 📄 {file}")
@@ -105,4 +105,4 @@ class HistoryTracker:
             console.print(result_table)
             
             input("**Press any key to return to home page**")
-            console.print(Panel("🏠 [bold yellow]Returning to home page...[/bold yellow]", border_style="yellow"))
+            console.print(Panel("🏠 [bold yellow]Returning to Main Menu...[/bold yellow]", border_style="yellow",width=48))

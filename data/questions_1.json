@@ -25,6 +25,16 @@
                             ],
                             "correct": 0,
                             "id": 2
+                        },
+                        {
+                            "id": 43,
+                            "question": "What is a variable in Python?",
+                            "options": [
+                                "A function",
+                                "A value storage",
+                                "A loop"
+                            ],
+                            "correct": 1
                         }
                     ]
                 },

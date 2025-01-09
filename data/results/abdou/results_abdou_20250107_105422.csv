@@ -1,6 +1,0 @@
-Username,Category,Date,Score,Total Questions,Percentage
-abdou,Python,2025-01-07 10:54:22,1,2,50.0
-
-Detailed Feedback
-Which keyword is used to define a function in Python?,Correct,Your answer: def,Correct answer: def
-What does the 'len()' function do in Python?,Incorrect,Your answer: Counts occurrences of an element,Correct answer: Returns the length of a string

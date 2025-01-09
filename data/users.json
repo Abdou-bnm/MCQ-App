@@ -7,27 +7,6 @@
     "abdou": {
         "password": "abdou",
         "role": "student",
-        "history": [
-            {
-                "date": "2025-01-07 10:37:27",
-                "category": "Python",
-                "score": "2/2"
-            },
-            {
-                "date": "2025-01-07 10:44:33",
-                "category": "Math",
-                "score": "1/2"
-            },
-            {
-                "date": "2025-01-07 10:54:22",
-                "category": "Python",
-                "score": "1/2"
-            },
-            {
-                "date": "2025-01-07 11:04:26",
-                "category": "Python",
-                "score": "0/2"
-            }
-        ]
+        "history": []
     }
 }

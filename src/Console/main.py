@@ -4,14 +4,18 @@ from Quiz import Quiz
 from rich.console import Console
 from rich.panel import Panel
 from rich.prompt import Prompt
-from rich.text import Text
+from rich.align import Align
+
 console = Console()
 
 def display_home():
     """
-    Display the home page with options only.
+    Display the Main Menu with options only.
     """
-    console.print(Panel(Text("Options :\n1️⃣  🧠 Start MCQ Test\n2️⃣  📜 View History\n3️⃣  ❌ Exit Application", justify="left"), title="📋 [bold blue]QCM Application[/bold blue]", border_style="magenta", padding=(1, 2)))
+    console.print(Panel(Align.center("📋 [bold blue]QCM Application[/bold blue]"), border_style="cyan", padding=(0, 2), width=48))  
+    menu_content = "\n".join(["[bold yellow]1️⃣  🧠 Start Test[/bold yellow]", "[bold green]2️⃣  📜 View History[/bold green]", "[bold red]3️⃣  ❌ Exit[/bold red]"])  
+    console.print(Panel(menu_content, title="[bold cyan]Main Menu[/bold cyan]", border_style="cyan", padding=(1, 2), width=48))  # 
+    console.print("[bold cyan]💡 Enter a number to choose an option:[/bold cyan]")  
 
 
 if __name__ == "__main__":
