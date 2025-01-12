@@ -3,7 +3,7 @@ import json
 # this function will be used to load a question by its id (we will use it after getting the id of a question the user hasn't already solved) and it will return true (if he chose the correct answer ) or false
 def load_question(id):
    try:
-        with open("questions.json", "r") as file:
+        with open("questions_1.json", "r") as file:
             questions = json.load(file)
         
         #search for the question by ID
@@ -41,7 +41,7 @@ def load_question(id):
 #returns the selected category as a string
 def select_category():
     try:
-        with open("questions.json", "r") as file:
+        with open("questions_1.json", "r") as file:
             questions = json.load(file) 
     except Exception as e:
         print(f"Error opening the questions file {e}")

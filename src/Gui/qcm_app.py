@@ -56,17 +56,7 @@ class QCMApp(ctk.CTk):
         scroll_frame.pack(pady=20, padx=20, fill="both", expand=True)
 
         for category in self.questions:
-            btn = ctk.CTkButton(
-                scroll_frame,
-                text=category["name"],
-                command=lambda c=category: self.show_levels(c),
-                font=("Arial", 18),
-                width=300,
-                height=50,
-                fg_color="#E94560",
-                text_color="white",
-                hover_color="#B23A48",
-            )
+            btn = ctk.CTkButton(scroll_frame,text=category["name"],command=lambda c=category: self.show_levels(c),font=("Arial", 18),width=300,height=50,fg_color="#E94560",text_color="white",hover_color="#B23A48",)
             btn.pack(pady=10)
 
     def show_levels(self, category):
@@ -74,9 +64,7 @@ class QCMApp(ctk.CTk):
         for widget in self.main_content.winfo_children():
             widget.destroy()
 
-        ctk.CTkLabel(
-            self.main_content, text=f"Category: {category['name']}", font=("Arial", 24), text_color="#E94560"
-        ).pack(pady=20)
+        ctk.CTkLabel(self.main_content, text=f"Category: {category['name']}", font=("Arial", 24), text_color="#E94560").pack(pady=20)
         ctk.CTkLabel(self.main_content, text="Select Level", font=("Arial", 20), text_color="white").pack(pady=10)
 
         for level in category["levels"]:
@@ -164,11 +152,13 @@ class QCMApp(ctk.CTk):
         ctk.CTkLabel(self.main_content,text=f"Your Score: {score_data['raw_score']}/{score_data['total_questions']} ({score_data['percentage']}%)",font=("Arial", 20),text_color="white",).pack(pady=10)
 
         self.evaluator.update_user_history(self.username, score_data, self.selected_category["name"])
-
+        self.evaluator.export_results(self.username, self.selected_category, score_data)
+                
         ctk.CTkLabel(self.main_content, text="Feedback:", font=("Arial", 18), text_color="white").pack(pady=10)
         ctk.CTkLabel(self.main_content, text=feedback_summary, font=("Arial", 14), wraplength=700, text_color="white").pack(pady=10)
 
         ctk.CTkButton(self.main_content,text="Back to Main Menu",command=self.return_to_main_menu,font=("Arial", 18),width=300,height=50,fg_color="#E94560",text_color="white",hover_color="#B23A48",).pack(pady=20)
+
 
     def return_to_main_menu(self):
         self.destroy()

@@ -55,7 +55,7 @@ class QuestionManager:
                         lvl["questions"] = level_obj["questions"]
                         break  
         
-        # we added the question now we need to update in in the questions.json file
+        # we added the question now we need to update in in the questions_1.json file
         self.categorymanager._save_data(questions)
         print("question added succesfully")
         return id
