@@ -94,7 +94,8 @@ Enhance your understanding of the MCQ-App with these visuals:
 - 🐍 **Python**&#x20;
 - 🖼️ **CustomTkinter** (GUI)&#x20;
 - ⚡ **Rich Library** (Console UI)&#x20;
-- 📄 **JSON** (Data storage) 
+- 📄 **JSON** (Data storage)
+- 📄 **CSV** (Data storage) 
 
 ## Known Issues
 
