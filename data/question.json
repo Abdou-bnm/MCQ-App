@@ -1,0 +1,42 @@
+{
+    "categories": [
+        {
+            "name": "Python",
+            "levels": [
+                {
+                    "level": "easy",
+                    "questions": [
+                        {
+                            "question": "Which keyword is used to define a function in Python?",
+                            "options": [
+                                "def",
+                                "func",
+                                "lambda"
+                            ],
+                            "correct": 0,
+                            "id": 1
+                        },
+                        {
+                            "question": "What does the 'len()' function do in Python?",
+                            "options": [
+                                "Returns the length of a string",
+                                "Calculates logarithm",
+                                "Counts occurrences of an element"
+                            ],
+                            "correct": 0,
+                            "id": 2
+                        }
+                    ]
+                },
+                {
+                    "level": "medium",
+                    "questions": [
+                        {
+                            "question": "What is the average time complexity of searching in a sorted array?",
+                            "options": [
+                                "O(1)",
+                                "O(log n)",
+                                "O(n)"
+                            ],
+                            "correct": 1,
+                            "id": 3

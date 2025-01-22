@@ -1,13 +1,14 @@
 {
-    "admin": {
-        "password": "admin123",
-        "role": "admin",
+    "wissem": {
+        "password": "info123",
         "history": []
     },
-    "abdou": {
-        "password": "abdou",
-        "role": "student",
-        "history": [
-        ]
+    "wiss": {
+        "password": "info123",
+        "history": []
+    },
+    "mademoiselle": {
+        "password": "info123",
+        "history": []
     }
 }
