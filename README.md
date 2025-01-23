@@ -39,7 +39,7 @@ MCQ-App is an interactive application designed to offer Multiple Choice Question
 ### Installation
 1. Clone this repository:
    ```bash
-   git clone [<repository-url>](https://github.com/Abdou-bnm/MCQ-App)
+   git clone https://github.com/Abdou-bnm/MCQ-App)
    ```
 2. Navigate to the project directory:
    ```bash
