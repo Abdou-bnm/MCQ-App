@@ -1,7 +1,21 @@
 {
-    "admin": {
-        "password": "admin123",
-        "role": "admin",
+    "hichem": {
+        "role": "student",
+        "history": [
+            {
+                "date": "2025-01-23 06:30:02",
+                "category": "Artificial Intelligence (AI)",
+                "score": "2/3"
+            },
+            {
+                "date": "2025-01-23 06:31:36",
+                "category": "Python",
+                "score": "2/3"
+            }
+        ]
+    },
+    "1": {
+        "role": "student",
         "history": []
     }
 }

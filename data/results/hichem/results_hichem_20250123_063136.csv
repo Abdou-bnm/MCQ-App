@@ -1,0 +1,7 @@
+Username,Category,Date,Score,Total Questions,Percentage
+hichem,Python,2025-01-23 06:31:36,2,3,66.66666666666666
+
+Detailed Feedback
+What is the purpose of the `__init__` method in Python classes?,Correct,Your answer: To initialize object attributes,Correct answer: To initialize object attributes
+What does the `yield` keyword do in Python?,Incorrect,Your answer: Pauses the function and returns a value,Correct answer: Defines a generator function
+What is the output of `print(list(range(3)))` in Python?,Correct,"Your answer: [0, 1, 2]","Correct answer: [0, 1, 2]"

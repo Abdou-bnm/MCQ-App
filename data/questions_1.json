@@ -17,14 +17,24 @@
                             "id": 1
                         },
                         {
-                            "id": 43,
-                            "question": "test",
+                            "question": "What is the output of `print(type([]))` in Python?",
                             "options": [
-                                "A function",
-                                "A value storage",
-                                "A loop"
+                                "<class 'list'>",
+                                "<class 'tuple'>",
+                                "<class 'array'>"
                             ],
-                            "correct": 1
+                            "correct": 0,
+                            "id": 2
+                        },
+                        {
+                            "question": "Which of the following is used to comment a single line in Python?",
+                            "options": [
+                                "//",
+                                "#",
+                                "--"
+                            ],
+                            "correct": 1,
+                            "id": 3
                         }
                     ]
                 },
@@ -32,24 +42,34 @@
                     "level": "medium",
                     "questions": [
                         {
-                            "question": "What is the average time complexity of searching in a sorted array?",
+                            "question": "What is the purpose of the `__init__` method in Python classes?",
                             "options": [
-                                "O(1)",
-                                "O(log n)",
-                                "O(n)"
+                                "To define a class",
+                                "To initialize object attributes",
+                                "To create a static method"
                             ],
                             "correct": 1,
-                            "id": 3
+                            "id": 4
                         },
                         {
-                            "question": "Which data structure is used to implement a queue in Python?",
+                            "question": "What does the `yield` keyword do in Python?",
                             "options": [
-                                "List",
-                                "Set",
-                                "Dictionary"
+                                "Returns a value and terminates the function",
+                                "Pauses the function and returns a value",
+                                "Defines a generator function"
+                            ],
+                            "correct": 2,
+                            "id": 5
+                        },
+                        {
+                            "question": "What is the output of `print(list(range(3)))` in Python?",
+                            "options": [
+                                "[0, 1, 2]",
+                                "[1, 2, 3]",
+                                "[3, 2, 1]"
                             ],
                             "correct": 0,
-                            "id": 4
+                            "id": 6
                         }
                     ]
                 },
@@ -57,134 +77,74 @@
                     "level": "hard",
                     "questions": [
                         {
-                            "question": "What is the output of the expression 3 ** 2 ** 2 in Python?",
+                            "question": "What is the difference between `deepcopy` and `copy` in Python?",
+                            "options": [
+                                "`deepcopy` duplicates only references; `copy` duplicates objects",
+                                "`deepcopy` duplicates objects recursively; `copy` duplicates only references",
+                                "They are the same"
+                            ],
+                            "correct": 1,
+                            "id": 7
+                        },
+                        {
+                            "question": "What is the output of `print(3 ** 2 ** 2)` in Python?",
                             "options": [
                                 "81",
                                 "16",
                                 "256"
                             ],
                             "correct": 2,
-                            "id": 5
+                            "id": 8
                         },
                         {
-                            "question": "What is the difference between a shallow copy and a deep copy in Python?",
+                            "question": "What is the purpose of the `@staticmethod` decorator in Python?",
                             "options": [
-                                "Shallow copy duplicates only references, deep copy duplicates objects",
-                                "Shallow copy duplicates objects, deep copy duplicates only references",
-                                "They are the same"
+                                "To define a method that belongs to the class rather than an instance",
+                                "To define a method that cannot be overridden",
+                                "To define a method that is private"
                             ],
                             "correct": 0,
-                            "id": 6
+                            "id": 9
                         }
                     ]
                 }
             ]
         },
         {
-            "name": "Science",
+            "name": "Data Structures",
             "levels": [
                 {
                     "level": "easy",
                     "questions": [
                         {
-                            "question": "Which planet is known as the Red Planet?",
+                            "question": "Which data structure uses the LIFO (Last In, First Out) principle?",
                             "options": [
-                                "Earth",
-                                "Mars",
-                                "Venus"
+                                "Queue",
+                                "Stack",
+                                "Linked List"
                             ],
                             "correct": 1,
-                            "id": 7
-                        },
-                        {
-                            "question": "What is the chemical symbol for water?",
-                            "options": [
-                                "H2O",
-                                "O2",
-                                "CO2"
-                            ],
-                            "correct": 0,
-                            "id": 8
-                        }
-                    ]
-                },
-                {
-                    "level": "medium",
-                    "questions": [
-                        {
-                            "question": "Which gas is most abundant in the Earth's atmosphere?",
-                            "options": [
-                                "Oxygen",
-                                "Nitrogen",
-                                "Carbon Dioxide"
-                            ],
-                            "correct": 1,
-                            "id": 9
-                        },
-                        {
-                            "question": "What is the primary source of energy for life on Earth?",
-                            "options": [
-                                "The Sun",
-                                "Volcanoes",
-                                "Wind"
-                            ],
-                            "correct": 0,
                             "id": 10
-                        }
-                    ]
-                },
-                {
-                    "level": "hard",
-                    "questions": [
+                        },
                         {
-                            "question": "What is the atomic number of Oxygen?",
+                            "question": "What is the time complexity of accessing an element in an array?",
                             "options": [
-                                "6",
-                                "8",
-                                "16"
+                                "O(1)",
+                                "O(log n)",
+                                "O(n)"
                             ],
-                            "correct": 1,
+                            "correct": 0,
                             "id": 11
                         },
                         {
-                            "question": "What is the speed of light in a vacuum?",
+                            "question": "Which data structure is used to implement a FIFO (First In, First Out) queue?",
                             "options": [
-                                "300,000 km/s",
-                                "150,000 km/s",
-                                "500,000 km/s"
-                            ],
-                            "correct": 0,
-                            "id": 12
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Math",
-            "levels": [
-                {
-                    "level": "easy",
-                    "questions": [
-                        {
-                            "question": "What is the square root of 64?",
-                            "options": [
-                                "6",
-                                "7",
-                                "8"
-                            ],
-                            "correct": 2,
-                            "id": 13
-                        },
-                        {
-                            "question": "What is 15% of 200?",
-                            "options": [
-                                "25",
-                                "30",
-                                "35"
+                                "Stack",
+                                "Queue",
+                                "Heap"
                             ],
                             "correct": 1,
-                            "id": 14
+                            "id": 12
                         }
                     ]
                 },
@@ -192,24 +152,34 @@
                     "level": "medium",
                     "questions": [
                         {
-                            "question": "What is the result of 7 + 8 * 2?",
+                            "question": "What is the time complexity of searching in a binary search tree?",
                             "options": [
-                                "30",
-                                "23",
-                                "22"
+                                "O(1)",
+                                "O(log n)",
+                                "O(n)"
+                            ],
+                            "correct": 1,
+                            "id": 13
+                        },
+                        {
+                            "question": "Which data structure is best for implementing a priority queue?",
+                            "options": [
+                                "Array",
+                                "Heap",
+                                "Linked List"
+                            ],
+                            "correct": 1,
+                            "id": 14
+                        },
+                        {
+                            "question": "What is the worst-case time complexity of inserting an element into a binary heap?",
+                            "options": [
+                                "O(1)",
+                                "O(log n)",
+                                "O(n)"
                             ],
                             "correct": 1,
                             "id": 15
-                        },
-                        {
-                            "question": "Which is a prime number?",
-                            "options": [
-                                "4",
-                                "6",
-                                "7"
-                            ],
-                            "correct": 2,
-                            "id": 16
                         }
                     ]
                 },
@@ -217,21 +187,31 @@
                     "level": "hard",
                     "questions": [
                         {
-                            "question": "What is the derivative of x^2?",
+                            "question": "What is the worst-case time complexity of quicksort?",
                             "options": [
-                                "x",
-                                "2x",
-                                "x^2"
+                                "O(n log n)",
+                                "O(n^2)",
+                                "O(n)"
                             ],
                             "correct": 1,
+                            "id": 16
+                        },
+                        {
+                            "question": "What is the space complexity of merge sort?",
+                            "options": [
+                                "O(1)",
+                                "O(log n)",
+                                "O(n)"
+                            ],
+                            "correct": 2,
                             "id": 17
                         },
                         {
-                            "question": "What is the value of Pi to 3 decimal places?",
+                            "question": "What is the time complexity of finding the shortest path in a graph using Dijkstra's algorithm?",
                             "options": [
-                                "3.142",
-                                "3.141",
-                                "3.140"
+                                "O(V log V + E)",
+                                "O(V^2)",
+                                "O(V + E)"
                             ],
                             "correct": 0,
                             "id": 18
@@ -241,30 +221,40 @@
             ]
         },
         {
-            "name": "Geography",
+            "name": "Databases",
             "levels": [
                 {
                     "level": "easy",
                     "questions": [
                         {
-                            "question": "What is the capital of France?",
+                            "question": "Which SQL command is used to retrieve data from a database?",
                             "options": [
-                                "Berlin",
-                                "Paris",
-                                "Madrid"
+                                "INSERT",
+                                "SELECT",
+                                "UPDATE"
                             ],
                             "correct": 1,
-                            "id": 19
+                            "id": 37
                         },
                         {
-                            "question": "Which continent is known as the 'Dark Continent'?",
+                            "question": "What is the purpose of a primary key in a database table?",
                             "options": [
-                                "Africa",
-                                "Asia",
-                                "South America"
+                                "To store large data",
+                                "To uniquely identify each record",
+                                "To encrypt data"
+                            ],
+                            "correct": 1,
+                            "id": 38
+                        },
+                        {
+                            "question": "Which SQL clause is used to filter rows?",
+                            "options": [
+                                "WHERE",
+                                "HAVING",
+                                "GROUP BY"
                             ],
                             "correct": 0,
-                            "id": 20
+                            "id": 39
                         }
                     ]
                 },
@@ -272,24 +262,34 @@
                     "level": "medium",
                     "questions": [
                         {
-                            "question": "Which river is the longest in the world?",
+                            "question": "What is the difference between INNER JOIN and LEFT JOIN in SQL?",
                             "options": [
-                                "Amazon",
-                                "Nile",
-                                "Yangtze"
-                            ],
-                            "correct": 1,
-                            "id": 21
-                        },
-                        {
-                            "question": "What is the largest desert in the world?",
-                            "options": [
-                                "Sahara",
-                                "Arctic Desert",
-                                "Gobi"
+                                "INNER JOIN returns only matching rows; LEFT JOIN returns all rows from the left table",
+                                "INNER JOIN returns all rows; LEFT JOIN returns only matching rows",
+                                "No difference"
                             ],
                             "correct": 0,
-                            "id": 22
+                            "id": 40
+                        },
+                        {
+                            "question": "What is normalization in databases?",
+                            "options": [
+                                "A process to reduce data redundancy",
+                                "A process to encrypt data",
+                                "A process to delete data"
+                            ],
+                            "correct": 0,
+                            "id": 41
+                        },
+                        {
+                            "question": "What is the purpose of an index in a database?",
+                            "options": [
+                                "To speed up data retrieval",
+                                "To store large data",
+                                "To encrypt data"
+                            ],
+                            "correct": 0,
+                            "id": 42
                         }
                     ]
                 },
@@ -297,54 +297,184 @@
                     "level": "hard",
                     "questions": [
                         {
-                            "question": "Which country has the most time zones?",
+                            "question": "What is a transaction in a database?",
                             "options": [
-                                "USA",
-                                "Russia",
-                                "France"
+                                "A single operation on the database",
+                                "A sequence of operations performed as a single unit",
+                                "A backup of the database"
                             ],
-                            "correct": 2,
+                            "correct": 1,
+                            "id": 43
+                        },
+                        {
+                            "question": "What is the purpose of ACID properties in a database?",
+                            "options": [
+                                "To ensure data consistency and reliability",
+                                "To speed up queries",
+                                "To encrypt data"
+                            ],
+                            "correct": 0,
+                            "id": 44
+                        },
+                        {
+                            "question": "What is the difference between a clustered and a non-clustered index?",
+                            "options": [
+                                "A clustered index sorts and stores data rows; a non-clustered index does not",
+                                "A non-clustered index sorts and stores data rows; a clustered index does not",
+                                "No difference"
+                            ],
+                            "correct": 0,
+                            "id": 45
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Artificial Intelligence (AI)",
+            "levels": [
+                {
+                    "level": "easy",
+                    "questions": [
+                        {
+                            "question": "What is the primary goal of Artificial Intelligence?",
+                            "options": [
+                                "To mimic human intelligence",
+                                "To replace human workers",
+                                "To create robots"
+                            ],
+                            "correct": 0,
+                            "id": 19
+                        },
+                        {
+                            "question": "Which of the following is a supervised learning algorithm?",
+                            "options": [
+                                "K-Means",
+                                "Linear Regression",
+                                "Apriori"
+                            ],
+                            "correct": 1,
+                            "id": 20
+                        },
+                        {
+                            "question": "What is the purpose of a neural network in AI?",
+                            "options": [
+                                "To store data",
+                                "To mimic the human brain for pattern recognition",
+                                "To encrypt data"
+                            ],
+                            "correct": 1,
+                            "id": 21
+                        }
+                    ]
+                },
+                {
+                    "level": "medium",
+                    "questions": [
+                        {
+                            "question": "What is overfitting in machine learning?",
+                            "options": [
+                                "When a model performs well on training data but poorly on unseen data",
+                                "When a model is too simple",
+                                "When a model is too slow"
+                            ],
+                            "correct": 0,
+                            "id": 22
+                        },
+                        {
+                            "question": "What is the difference between reinforcement learning and supervised learning?",
+                            "options": [
+                                "Reinforcement learning uses labeled data; supervised learning uses rewards",
+                                "Reinforcement learning uses rewards; supervised learning uses labeled data",
+                                "They are the same"
+                            ],
+                            "correct": 1,
                             "id": 23
                         },
                         {
-                            "question": "What is the highest mountain outside Asia?",
+                            "question": "What is a GAN (Generative Adversarial Network) in AI?",
                             "options": [
-                                "Mount Kilimanjaro",
-                                "Aconcagua",
-                                "Denali"
+                                "A network for classification tasks",
+                                "A network that generates new data by pitting two neural networks against each other",
+                                "A network for regression tasks"
                             ],
                             "correct": 1,
                             "id": 24
                         }
                     ]
+                },
+                {
+                    "level": "hard",
+                    "questions": [
+                        {
+                            "question": "What is the purpose of backpropagation in neural networks?",
+                            "options": [
+                                "To adjust the weights of the network to minimize error",
+                                "To initialize the weights of the network",
+                                "To visualize the network structure"
+                            ],
+                            "correct": 0,
+                            "id": 25
+                        },
+                        {
+                            "question": "What is the difference between a convolutional neural network (CNN) and a recurrent neural network (RNN)?",
+                            "options": [
+                                "CNN is used for image processing; RNN is used for sequential data",
+                                "CNN is used for sequential data; RNN is used for image processing",
+                                "No difference"
+                            ],
+                            "correct": 0,
+                            "id": 26
+                        },
+                        {
+                            "question": "What is the purpose of a loss function in machine learning?",
+                            "options": [
+                                "To measure the difference between predicted and actual values",
+                                "To initialize model parameters",
+                                "To visualize data"
+                            ],
+                            "correct": 0,
+                            "id": 27
+                        }
+                    ]
                 }
             ]
         },
         {
-            "name": "Object-Oriented Programming (OOP)",
+            "name": "Networking",
             "levels": [
                 {
                     "level": "easy",
                     "questions": [
                         {
-                            "question": "What is an object in OOP?",
+                            "question": "What does IP stand for in networking?",
                             "options": [
-                                "A function",
-                                "An instance of a class",
-                                "A data type"
-                            ],
-                            "correct": 1,
-                            "id": 25
-                        },
-                        {
-                            "question": "Which keyword is used to define a class in Python?",
-                            "options": [
-                                "class",
-                                "object",
-                                "define"
+                                "Internet Protocol",
+                                "Internal Protocol",
+                                "Internet Port"
                             ],
                             "correct": 0,
-                            "id": 26
+                            "id": 46
+                        },
+                        {
+                            "question": "Which protocol is used for secure communication over the internet?",
+                            "options": [
+                                "HTTP",
+                                "HTTPS",
+                                "FTP"
+                            ],
+                            "correct": 1,
+                            "id": 47
+                        },
+                        {
+                            "question": "What is the purpose of a router in a network?",
+                            "options": [
+                                "To connect multiple networks and forward data packets",
+                                "To store data",
+                                "To encrypt data"
+                            ],
+                            "correct": 0,
+                            "id": 48
                         }
                     ]
                 },
@@ -352,24 +482,34 @@
                     "level": "medium",
                     "questions": [
                         {
-                            "question": "Which OOP principle promotes code reuse?",
+                            "question": "What is the purpose of a DNS server?",
                             "options": [
-                                "Encapsulation",
-                                "Inheritance",
-                                "Polymorphism"
+                                "To store website data",
+                                "To translate domain names to IP addresses",
+                                "To encrypt data"
                             ],
                             "correct": 1,
-                            "id": 27
+                            "id": 49
                         },
                         {
-                            "question": "What is the purpose of the '__init__' method in Python classes?",
+                            "question": "What is the difference between TCP and UDP?",
                             "options": [
-                                "To initialize a class",
-                                "To define a class name",
-                                "To initialize object attributes"
+                                "TCP is connection-oriented; UDP is connectionless",
+                                "TCP is faster; UDP is slower",
+                                "TCP is unreliable; UDP is reliable"
                             ],
-                            "correct": 2,
-                            "id": 28
+                            "correct": 0,
+                            "id": 50
+                        },
+                        {
+                            "question": "What is the purpose of a subnet mask?",
+                            "options": [
+                                "To divide an IP network into smaller networks",
+                                "To encrypt data",
+                                "To store data"
+                            ],
+                            "correct": 0,
+                            "id": 51
                         }
                     ]
                 },
@@ -377,79 +517,109 @@
                     "level": "hard",
                     "questions": [
                         {
-                            "question": "What is method overloading?",
+                            "question": "What is the purpose of a firewall in networking?",
                             "options": [
-                                "Defining multiple methods with the same name but different arguments",
-                                "Replacing a parent class method in a child class",
-                                "A feature that doesn't exist in Python"
+                                "To block unauthorized access",
+                                "To speed up internet connection",
+                                "To store data"
                             ],
                             "correct": 0,
+                            "id": 52
+                        },
+                        {
+                            "question": "What is the difference between IPv4 and IPv6?",
+                            "options": [
+                                "IPv4 uses 32-bit addresses; IPv6 uses 128-bit addresses",
+                                "IPv4 uses 128-bit addresses; IPv6 uses 32-bit addresses",
+                                "No difference"
+                            ],
+                            "correct": 0,
+                            "id": 53
+                        },
+                        {
+                            "question": "What is the purpose of NAT (Network Address Translation)?",
+                            "options": [
+                                "To map private IP addresses to a public IP address",
+                                "To encrypt data",
+                                "To store data"
+                            ],
+                            "correct": 0,
+                            "id": 54
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Security",
+            "levels": [
+                {
+                    "level": "easy",
+                    "questions": [
+                        {
+                            "question": "What is the primary purpose of a firewall?",
+                            "options": [
+                                "To block unauthorized access",
+                                "To speed up internet connection",
+                                "To store data"
+                            ],
+                            "correct": 0,
+                            "id": 28
+                        },
+                        {
+                            "question": "Which of the following is a common type of malware?",
+                            "options": [
+                                "Firewall",
+                                "Virus",
+                                "Router"
+                            ],
+                            "correct": 1,
                             "id": 29
                         },
                         {
-                            "question": "What is the diamond problem in multiple inheritance?",
+                            "question": "What does HTTPS stand for?",
                             "options": [
-                                "An issue where a class inherits the same attribute from multiple parents",
-                                "A problem with recursion",
-                                "A runtime error in polymorphism"
+                                "HyperText Transfer Protocol Secure",
+                                "HyperText Transfer Protocol Standard",
+                                "HyperText Transfer Protocol System"
                             ],
                             "correct": 0,
                             "id": 30
                         }
                     ]
-                }
-            ]
-        },
-        {
-            "name": "File and Folder Structures",
-            "levels": [
-                {
-                    "level": "easy",
-                    "questions": [
-                        {
-                            "question": "What does the root folder represent in a file system?",
-                            "options": [
-                                "The parent directory of all files and folders",
-                                "A folder within a directory",
-                                "A hidden folder"
-                            ],
-                            "correct": 0,
-                            "id": 31
-                        },
-                        {
-                            "question": "Which symbol is commonly used to indicate the current directory?",
-                            "options": [
-                                ".",
-                                "..",
-                                "/"
-                            ],
-                            "correct": 0,
-                            "id": 32
-                        }
-                    ]
                 },
                 {
                     "level": "medium",
                     "questions": [
                         {
-                            "question": "What does the 'mkdir' command do in most operating systems?",
+                            "question": "What is the purpose of encryption?",
                             "options": [
-                                "Creates a new folder",
-                                "Deletes a folder",
-                                "Moves a folder"
+                                "To hide data from unauthorized users",
+                                "To compress data",
+                                "To delete data"
+                            ],
+                            "correct": 0,
+                            "id": 31
+                        },
+                        {
+                            "question": "What is a brute force attack?",
+                            "options": [
+                                "A method of trying all possible combinations to crack a password",
+                                "A method of encrypting data",
+                                "A method of deleting data"
+                            ],
+                            "correct": 0,
+                            "id": 32
+                        },
+                        {
+                            "question": "What is two-factor authentication (2FA)?",
+                            "options": [
+                                "A security process that requires two forms of identification",
+                                "A method of encrypting data twice",
+                                "A type of firewall"
                             ],
                             "correct": 0,
                             "id": 33
-                        },
-                        {
-                            "question": "What is the difference between an absolute and a relative path?",
-                            "options": [
-                                "Absolute path starts from the root; relative path starts from the current directory",
-                                "Absolute path uses special symbols; relative path does not",
-                                "No difference"
-                            ],
-                            "correct": 0,
-                            "id": 34
                         }
                     ]
                 },
@@ -457,21 +627,31 @@
                     "level": "hard",
                     "questions": [
                         {
-                            "question": "In a file structure, what is the purpose of a '.gitignore' file?",
+                            "question": "What is the difference between symmetric and asymmetric encryption?",
                             "options": [
-                                "To list files and directories to ignore in version control",
-                                "To delete unnecessary files",
-                                "To store configurations"
+                                "Symmetric encryption uses one key; asymmetric encryption uses two keys",
+                                "Symmetric encryption uses two keys; asymmetric encryption uses one key",
+                                "No difference"
+                            ],
+                            "correct": 0,
+                            "id": 34
+                        },
+                        {
+                            "question": "What is a zero-day vulnerability?",
+                            "options": [
+                                "A vulnerability that is exploited before the vendor releases a patch",
+                                "A vulnerability that is never exploited",
+                                "A vulnerability that is fixed immediately"
                             ],
                             "correct": 0,
                             "id": 35
                         },
                         {
-                            "question": "What does the 'symlink' (symbolic link) represent in file systems?",
+                            "question": "What is the purpose of a VPN (Virtual Private Network)?",
                             "options": [
-                                "A reference to another file or directory",
-                                "A duplicate file",
-                                "A hidden file"
+                                "To encrypt internet traffic and hide the user's IP address",
+                                "To speed up internet connection",
+                                "To store data securely"
                             ],
                             "correct": 0,
                             "id": 36
@@ -480,5 +660,6 @@
                 }
             ]
         }
+        
     ]
 }

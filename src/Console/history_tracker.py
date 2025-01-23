@@ -10,13 +10,19 @@ console = Console()
 class HistoryTracker:
     FILE_PATH = "data/users.json"
     RESULT_DIR = ""
-    
+
     @staticmethod
     def username_dir(username):
+        """
+        Sets the result directory for the given username.
+        """
         HistoryTracker.RESULT_DIR = f"data/results/{username}"
-        
+
     @staticmethod
     def display_detailed_history(username):
+        """
+        Displays the user's quiz history in a table format.
+        """
         with open(HistoryTracker.FILE_PATH, 'r') as file:
             users = json.load(file)
 
@@ -25,7 +31,7 @@ class HistoryTracker:
             return
 
         # Display history as a table
-        table = Table(title=Panel(f"📜 {username}'s History", border_style="blue"))
+        table = Table(title=Panel(f"📜 {username}'s History", border_style="blue")) # type: ignore
         table.add_column("📅 Date", style="cyan")
         table.add_column("📚 Category", style="magenta")
         table.add_column("✅ Score", style="green")
@@ -37,6 +43,9 @@ class HistoryTracker:
 
     @staticmethod
     def display_result_details(username):
+        """
+        Displays detailed results for a specific quiz attempt.
+        """
         HistoryTracker.username_dir(username)
         result_files = [f for f in os.listdir(HistoryTracker.RESULT_DIR) if f.startswith(f"results_{username}_") and f.endswith('.csv')]
         if not result_files:
@@ -45,14 +54,14 @@ class HistoryTracker:
             console.print(Panel("🏠 [bold yellow]Returning to home page...[/bold yellow]", border_style="yellow"))
             return
 
-        console.print(Panel("[bold yellow]📁 Available Tests:[/bold yellow]", border_style="blue",width=48))
+        console.print(Panel("[bold yellow]📁 Available Tests:[/bold yellow]", border_style="blue", width=48))
         console.print("0. [bold red] Return to home page [/bold red]")
         for idx, file in enumerate(result_files, 1):
             console.print(f"{idx}. 📄 {file}")
 
         try:
             choice = int(console.input("[bold blue]Select a test to view details (number): [/bold blue]"))
-            if choice == 0 :
+            if choice == 0:
                 return
             selected_file = result_files[choice - 1]
         except (IndexError, ValueError):
@@ -99,4 +108,4 @@ class HistoryTracker:
             console.print(result_table)
             
             input("**Press any key to return to home page**")
-            console.print(Panel("🏠 [bold yellow]Returning to Main Menu...[/bold yellow]", border_style="yellow",width=48))
+            console.print(Panel("🏠 [bold yellow]Returning to Main Menu...[/bold yellow]", border_style="yellow", width=48))

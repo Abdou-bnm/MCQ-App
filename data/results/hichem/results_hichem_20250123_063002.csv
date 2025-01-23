@@ -1,0 +1,6 @@
+Username,Category,Date,Score,Total Questions,Percentage
+hichem,Artificial Intelligence (AI),2025-01-23 06:30:02,2,3,66.66666666666666
+
+Detailed Feedback
+What is overfitting in machine learning?,Correct,Your answer: When a model performs well on training data but poorly on unseen data,Correct answer: When a model performs well on training data but poorly on unseen data
+What is a GAN (Generative Adversarial Network) in AI?,Correct,Your answer: A network that generates new data by pitting two neural networks against each other,Correct answer: A network that generates new data by pitting two neural networks against each other
