@@ -3,11 +3,5 @@
         "password": "admin123",
         "role": "admin",
         "history": []
-    },
-    "abdou": {
-        "password": "abdou",
-        "role": "student",
-        "history": [
-        ]
     }
 }

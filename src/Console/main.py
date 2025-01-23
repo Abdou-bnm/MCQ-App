@@ -19,20 +19,24 @@ def display_home():
 
 
 if __name__ == "__main__":
-    
-    user_manager = UserManager()
-    username = user_manager.get_or_create_user()
-    
-    while True:
-        display_home()
-        choice = Prompt.ask("[bold yellow]Choose an option [/bold yellow]", choices=["1", "2", "3"])
+    try:
+        user_manager = UserManager()
+        username = user_manager.get_or_create_user()
 
-        if choice == "1":
-            Quiz.start_quiz(username) 
-        elif choice == "2":
-            HistoryTracker.display_detailed_history(username) 
-            HistoryTracker.display_result_details(username)
-        elif choice == "3":
-            console.print("👋 [bold yellow]Goodbye![/bold yellow] ")
-            break
+        while True:
+            display_home()
+            try:
+                choice = Prompt.ask("[bold yellow]Choose an option [/bold yellow]", choices=["1", "2", "3"])
+                if choice == "1":
+                    Quiz.start_quiz(username)
+                elif choice == "2":
+                    HistoryTracker.display_detailed_history(username)
+                    HistoryTracker.display_result_details(username)
+                elif choice == "3":
+                    console.print("👋 [bold yellow]Goodbye![/bold yellow]")
+                    break
+            except Exception as e:
+                console.print(f"[red]Error: {e}. Returning to main menu...[/red]")
+    except Exception as e:
+        console.print(f"[red]Critical error occurred: {e}. Exiting application.[/red]")
 

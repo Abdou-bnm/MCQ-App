@@ -17,9 +17,6 @@ class HistoryTracker:
         
     @staticmethod
     def display_detailed_history(username):
-        """
-        Display a summary of past attempts for the user.
-        """
         with open(HistoryTracker.FILE_PATH, 'r') as file:
             users = json.load(file)
 
@@ -40,9 +37,6 @@ class HistoryTracker:
 
     @staticmethod
     def display_result_details(username):
-        """
-        Display details of a specific quiz attempt including metadata and results.
-        """
         HistoryTracker.username_dir(username)
         result_files = [f for f in os.listdir(HistoryTracker.RESULT_DIR) if f.startswith(f"results_{username}_") and f.endswith('.csv')]
         if not result_files:
@@ -52,7 +46,7 @@ class HistoryTracker:
             return
 
         console.print(Panel("[bold yellow]📁 Available Tests:[/bold yellow]", border_style="blue",width=48))
-        console.print("[bold red]0. Return to home page [/bold red]")
+        console.print("0. [bold red] Return to home page [/bold red]")
         for idx, file in enumerate(result_files, 1):
             console.print(f"{idx}. 📄 {file}")
 

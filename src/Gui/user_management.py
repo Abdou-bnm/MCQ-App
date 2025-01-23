@@ -35,6 +35,8 @@ class UserManager:
             users[username] = {'password': password, 'role': 'student', 'history': []}
             save_users(users)
             messagebox.showinfo("Success", "User created successfully! Login again.")
+            folder_path = os.path.join("data", "results", username)
+            os.makedirs(folder_path, exist_ok=True)
 
 
     def setup_admin_dashboard(self):

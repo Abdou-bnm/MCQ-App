@@ -6,23 +6,34 @@ class QuestionManager:
     FILE_PATH = "data/questions_1.json"
 
     def __init__(self):
-        with open(self.FILE_PATH, 'r') as file:
-            self.questions_data = json.load(file)
+        try:
+            with open(self.FILE_PATH, 'r') as file:
+                self.questions_data = json.load(file)
+        except FileNotFoundError:
+            console.print(f"[red]Error: Questions file '{self.FILE_PATH}' not found.[/red]")
+        except json.JSONDecodeError:
+            console.print(f"[red]Error: Failed to decode '{self.FILE_PATH}'. Please check the file format.[/red]")
 
     def select_category(self):
-        console.print("\n[bold cyan]Available Categories:[/bold cyan]")
-        categories = [category['name'] for category in self.questions_data['categories']]
-        for idx, category in enumerate(categories, 1):
-            console.print(f"{idx}. {category}")
+        try:
+            categories = [category['name'] for category in self.questions_data.get('categories', [])]
+            if not categories:
+                console.print("[red]No categories found in the questions file.[/red]")
+                return None
 
-        while True:
-            try:
-                choice = int(console.input("[bold blue]Select a category (number): [/bold blue]")) - 1
-                if 0 <= choice < len(categories):
-                    return categories[choice]
-            except ValueError:
-                console.print("[red]Invalid input. Try again![/red]")
-
+            console.print("\n[bold cyan]Available Categories:[/bold cyan]")
+            for idx, category in enumerate(categories, 1):
+                console.print(f"{idx}. {category}")
+            
+            while True:
+                try:
+                    choice = int(console.input("[bold blue]Select a category (number): [/bold blue]")) - 1
+                    if 0 <= choice < len(categories):
+                        return categories[choice]
+                except ValueError:
+                    console.print("[red]Invalid input. Try again![/red]")
+        except Exception as e:
+            console.print(f"[red]Error selecting category: {e}[/red]")
     def select_level(self, category):
         for cat in self.questions_data['categories']:
             if cat['name'] == category:

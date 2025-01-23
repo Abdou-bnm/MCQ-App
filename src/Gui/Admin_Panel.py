@@ -5,6 +5,7 @@ from utils import center_window
 from QuestionManager import QuestionManager
 from category import CategoryManager
 import json
+import os
 
 ctk.set_appearance_mode("dark")  
 ctk.set_default_color_theme("blue")  
@@ -13,6 +14,8 @@ class AdminPanel(ctk.CTk):
     def __init__(self):
         super().__init__()
 
+        
+        
         self.title("Admin Panel")
         self.geometry("800x600")
         self.resizable(False, False)
@@ -21,6 +24,7 @@ class AdminPanel(ctk.CTk):
         self.users = self.load_users()
         
         self.file_path = "data/questions_1.json"
+        self.user_path = "data/users.json"
         self.user_file_path = "data/users.json"
         self.question_manager = QuestionManager(self.file_path)
         self.category_manager = CategoryManager(self.file_path)
@@ -100,7 +104,16 @@ class AdminPanel(ctk.CTk):
         button_frame = ctk.CTkFrame(self.tabs, fg_color="transparent")
         button_frame.pack(pady=10)
 
-        ctk.CTkButton(button_frame, text="Add Question", command=self.add_question).pack(side="left", padx=10)
+        add_button = ctk.CTkButton(
+            self.sidebar, 
+            text="Add Question", 
+            command=self.add_question, 
+            fg_color="#E94560", 
+            text_color="white", 
+            hover_color="#D32F2F"
+        )
+        add_button.pack(pady=10, padx=20)
+
         ctk.CTkButton(button_frame, text="Edit Question", command=self.edit_question).pack(side="left", padx=10)
         ctk.CTkButton(button_frame, text="Delete Question", command=self.delete_question).pack(side="left", padx=10)
 
@@ -157,20 +170,53 @@ class AdminPanel(ctk.CTk):
                     )
 
     def add_question(self):
-        category = simpledialog.askstring("Category", "Enter category name:")
-        level = simpledialog.askstring("Level", "Enter level (easy, medium, hard):")
-        question_text = simpledialog.askstring("Question", "Enter question text:")
-        options = simpledialog.askstring("Options", "Enter options (comma-separated):")
-        correct = int(simpledialog.askstring("Correct Option", "Enter index of correct option (0-based):"))
+        """Add a new question using QuestionManager."""
+        try:
+            # Gather inputs from the user
+            category = simpledialog.askstring("Category", "Enter category name:")
+            if not category:
+                messagebox.showerror("Error", "Category name cannot be empty.")
+                return
 
-        if not all([category, level, question_text, options]):
-            messagebox.showerror("Error", "All fields are required.")
-            return
+            level = simpledialog.askstring("Level", "Enter level (easy, medium, hard):")
+            if level not in ["easy", "medium", "hard"]:
+                messagebox.showerror("Error", "Invalid level. Please enter 'easy', 'medium', or 'hard'.")
+                return
 
-        options = options.split(",")
-        self.question_manager.add_question(category, level, question_text, options, correct)
-        messagebox.showinfo("Success", "Question added successfully!")
-        self.refresh_questions()
+            question_text = simpledialog.askstring("Question", "Enter question text:")
+            if not question_text:
+                messagebox.showerror("Error", "Question text cannot be empty.")
+                return
+
+            options = simpledialog.askstring("Options", "Enter options (comma-separated):")
+            if not options:
+                messagebox.showerror("Error", "Options cannot be empty.")
+                return
+            options = options.split(",")
+            if len(options) < 2:
+                messagebox.showerror("Error", "You must provide at least two options.")
+                return
+
+            correct = simpledialog.askstring("Correct Option", "Enter the index of the correct option (0-based):")
+            if not correct or not correct.isdigit() or int(correct) < 0 or int(correct) >= len(options):
+                messagebox.showerror("Error", "Invalid correct option index.")
+                return
+            correct = int(correct)
+
+            # Call QuestionManager to add the question
+            self.question_manager.add_question(category, level, question_text, options, correct)
+
+            # Refresh the GUI table
+            self.refresh_questions()
+
+            # Success feedback
+            messagebox.showinfo("Success", "Question added successfully!")
+        except ValueError as ve:
+            messagebox.showerror("Error", f"Validation Error: {ve}")
+        except Exception as e:
+            messagebox.showerror("Error", f"An unexpected error occurred: {e}")
+
+
 
     def edit_question(self):
         selected = self.tree.selection()
@@ -307,8 +353,13 @@ class AdminPanel(ctk.CTk):
         if username in self.users:
             messagebox.showerror("Error", "User already exists.")
             return
+        password = simpledialog.askstring("Add User", "Enter Password:")
         role = simpledialog.askstring("Add User", "Enter Role (admin/student):")
-        self.users[username] = {"role": role}
+        self.users[username] = {"password": password ,"role": role , "history": []}
+        with open(self.user_path, 'w') as file:
+            json.dump(self.users, file, indent=4)
+        folder_path = os.path.join("data", "results", username)
+        os.makedirs(folder_path, exist_ok=True)
         self.save_users()
         self.refresh_users_table()
 

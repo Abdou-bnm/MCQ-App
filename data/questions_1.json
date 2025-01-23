@@ -17,18 +17,8 @@
                             "id": 1
                         },
                         {
-                            "question": "What does the 'len()' function do in Python?",
-                            "options": [
-                                "Returns the length of a string",
-                                "Calculates logarithm",
-                                "Counts occurrences of an element"
-                            ],
-                            "correct": 0,
-                            "id": 2
-                        },
-                        {
                             "id": 43,
-                            "question": "What is a variable in Python?",
+                            "question": "test",
                             "options": [
                                 "A function",
                                 "A value storage",
@@ -485,86 +475,6 @@
                             ],
                             "correct": 0,
                             "id": 36
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Databases",
-            "levels": [
-                {
-                    "level": "easy",
-                    "questions": [
-                        {
-                            "question": "What is a database?",
-                            "options": [
-                                "A collection of organized data",
-                                "A type of file system",
-                                "A software library"
-                            ],
-                            "correct": 0,
-                            "id": 37
-                        },
-                        {
-                            "question": "What does SQL stand for?",
-                            "options": [
-                                "Structured Query Language",
-                                "Simple Query Language",
-                                "Sequential Query Language"
-                            ],
-                            "correct": 0,
-                            "id": 38
-                        }
-                    ]
-                },
-                {
-                    "level": "medium",
-                    "questions": [
-                        {
-                            "question": "Which SQL command is used to fetch data from a database?",
-                            "options": [
-                                "SELECT",
-                                "INSERT",
-                                "UPDATE"
-                            ],
-                            "correct": 0,
-                            "id": 39
-                        },
-                        {
-                            "question": "What is a primary key in a database?",
-                            "options": [
-                                "A unique identifier for each record",
-                                "A foreign key in a table",
-                                "A key that encrypts data"
-                            ],
-                            "correct": 0,
-                            "id": 40
-                        }
-                    ]
-                },
-                {
-                    "level": "hard",
-                    "questions": [
-                        {
-                            "question": "What is the difference between OLTP and OLAP?",
-                            "options": [
-                                "OLTP is for transactional processing; OLAP is for analytical processing",
-                                "OLTP is for analytics; OLAP is for transactions",
-                                "Both are the same"
-                            ],
-                            "correct": 0,
-                            "id": 41
-                        },
-                        {
-                            "question": "What is a database index, and why is it used?",
-                            "options": [
-                                "A data structure to speed up search queries",
-                                "A backup of a database",
-                                "A summary of database tables"
-                            ],
-                            "correct": 0,
-                            "id": 42
                         }
                     ]
                 }
