@@ -1,4 +1,9 @@
 {
+    "admin": {
+        "password": "admin123",
+        "role": "admin",
+        "history": []
+    },
     "hichem": {
         "role": "student",
         "history": [
@@ -13,9 +18,6 @@
                 "score": "2/3"
             }
         ]
-    },
-    "1": {
-        "role": "student",
-        "history": []
     }
+    
 }
