@@ -151,7 +151,7 @@ class AdminPanel(ctk.CTk):
         button_frame = ctk.CTkFrame(self.tabs, fg_color="transparent")
         button_frame.pack(pady=10)
 
-        ctk.CTkButton(button_frame, text="Add Question", command=self.add_question).pack(side="left", padx=10)
+        # ctk.CTkButton(button_frame, text="Add Question", command=self.add_question).pack(side="left", padx=10)
         ctk.CTkButton(button_frame, text="Edit Question", command=self.edit_question).pack(side="left", padx=10)
         ctk.CTkButton(button_frame, text="Delete Question", command=self.delete_question).pack(side="left", padx=10)
 
