@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/456696b7-0050-4cc5-bd21-c281a42b5747)# Multiple-Choice Questionnaire (MCQ) Application
+# Multiple-Choice Questionnaire (MCQ) Application
 
 ## Overview
 
